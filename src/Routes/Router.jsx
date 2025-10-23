@@ -21,12 +21,10 @@ const router = createBrowserRouter([
         Component: Home,
         loader: () => fetch('/6data.json'),
         hydrateFallbackElement: <Loading></Loading>,
-        handle: { title: 'Home' },
       },
       {
         path: '/profile',
         Component: Profile,
-        handle: { title: 'Profile' },
       },
 
       {
@@ -38,18 +36,15 @@ const router = createBrowserRouter([
         ),
         loader: () => fetch('/12data.json'),
         hydrateFallbackElement: <Loading></Loading>,
-        handle: { title: 'All Toys' },
       },
 
       {
         path: '/login',
         Component: Login,
-        handle: { title: 'Login' },
       },
       {
         path: '/register',
         Component: Register,
-        handle: { title: 'Register' },
       },
     ],
   },
@@ -63,13 +58,11 @@ const router = createBrowserRouter([
     ),
     loader: () => fetch('/12data.json'),
     hydrateFallbackElement: <Loading></Loading>,
-    handle: { title: 'Toy Details' },
   },
 
   {
     path: '/*',
     Component: Error404,
-    handle: { title: 'Error' },
   },
 ]);
 

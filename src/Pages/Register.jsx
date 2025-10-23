@@ -79,6 +79,7 @@ const Register = () => {
 
   return (
     <div>
+      <title>ToyTopia - Register</title>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">

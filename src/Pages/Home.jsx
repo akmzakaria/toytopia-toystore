@@ -5,6 +5,7 @@ import PopularToys from '../Components/PopularToys';
 const Home = () => {
   return (
     <div>
+      <title>ToyTopia - Home</title>
       <Slider></Slider>
       <PopularToys></PopularToys>
     </div>

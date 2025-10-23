@@ -7,6 +7,7 @@ const AllToys = () => {
 
   return (
     <div className="flex flex-col items-center">
+      <title>ToyTopia - All Toys</title>
       <div className="grid grid-cols-2 md:grid-cols-3 mx-4 md:mx-auto place-items-center gap-10">
         {data.map((toy) => (
           <div key={toy.toyId}>

@@ -89,6 +89,7 @@ const Login = () => {
 
   return (
     <div>
+      <title>ToyTopia - Login</title>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
