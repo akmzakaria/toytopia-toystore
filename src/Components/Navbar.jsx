@@ -1,23 +1,62 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router';
+import React, { use } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { user, logOut, setUser } = use(AuthContext);
   const links = (
     <nav className="flex flex-col md:flex-row">
       <li>
-        <NavLink to={'/'}>Home</NavLink>
+        <NavLink className={'hover:bg-black'} to={'/'}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/alltoys'}>All Toys</NavLink>
+        <NavLink className={'hover:bg-black'} to={'/alltoys'}>
+          All Toys
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/profile'}>My Profile</NavLink>
+        <NavLink className={'hover:bg-black'} to={'/profile'}>
+          My Profile
+        </NavLink>
       </li>
     </nav>
   );
 
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    logOut()
+      .then(() => {
+        toast.warn('Logged Out Successfully!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
+        setUser(null);
+        navigate('/login');
+      })
+      .catch(() => {
+        toast.warn('Unable to log out. Please try again!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
+      });
+  };
+
   return (
-    <div>
+    <div className="bg-black">
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
@@ -60,11 +99,25 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <NavLink to={''} className="btn btn-primary rounded-full px-10">
-            Login
-          </NavLink>
+          {user ? (
+            <Link onClick={handleLogOut} className="btn btn-secondary rounded-full px-10">
+              Log Out
+            </Link>
+          ) : (
+            <Link to={'/login'} className="btn btn-primary rounded-full px-10">
+              Login
+            </Link>
+          )}
         </div>
       </div>
+      {user && (
+        <div className="flex flex-col px-6 pb-2 text-sm">
+          <p>Name: {user.displayName}</p>
+          <p>
+            Email: <span className="text-primary">{user.email}</span>
+          </p>
+        </div>
+      )}
     </div>
   );
 };

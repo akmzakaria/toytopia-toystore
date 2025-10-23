@@ -5,9 +5,9 @@ const Footer = () => {
     <div className=" text-[#A1A1AA]">
       <div className="flex md:flex-row flex-col md:justify-around text-center max-w-[1400px] mx-auto gap-8 py-10">
         <div className="flex-2 flex-col">
-          <h2 className="font-bold mb-3 text-white">ToyTpoia</h2>
+          <h2 className="font-bold mb-3 text-white">ToyToia</h2>
           <p className="px-10 text-sm md:text-[1rem] md:px-0">
-            ToyTpoia is an all-in-one app discovery platform where users can explore, download, and
+            ToyToia is an all-in-one app discovery platform where users can explore, download, and
             manage a wide variety of apps in one place. Designed for speed and simplicity, Hero.IO
             offers a smooth, secure, and intuitive experience that makes finding the right apps
             easier than ever.
@@ -54,7 +54,7 @@ const Footer = () => {
       <hr className="border-gray-600 max-w-[1400px] mx-auto" />
 
       <footer className="p-5 text-xs md:text-sm text-center">
-        © 2025 ToyTpoia. All rights reserved.
+        © 2025 ToyToia. All rights reserved.
       </footer>
     </div>
   );

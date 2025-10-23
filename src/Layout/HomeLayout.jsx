@@ -4,11 +4,12 @@ import Navbar from '../Components/Navbar';
 import Profile from '../Pages/Profile';
 import { Outlet } from 'react-router';
 import Footer from '../Components/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const HomeLayout = () => {
   return (
     <div>
-      <header>
+      <header className="sticky top-0 z-1">
         <Navbar></Navbar>
       </header>
 

@@ -17,7 +17,7 @@ const ToyDetails = () => {
     e.preventDefault();
     setSuccess('Successfully Submitted!');
     e.target.reset();
-    setTimeout(() => setSuccess(''), 3000);
+    setTimeout(() => setSuccess(''), 5000);
   };
 
   return (
