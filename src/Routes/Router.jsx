@@ -32,6 +32,7 @@ const router = createBrowserRouter([
   {
     path: 'toydetails/:id',
     element: <ToyDetails></ToyDetails>,
+    loader: () => fetch('/12data.json'),
   },
 ]);
 

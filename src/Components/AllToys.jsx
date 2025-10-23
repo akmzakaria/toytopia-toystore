@@ -14,7 +14,7 @@ const AllToys = () => {
           </div>
         ))}
       </div>
-      <Link className="btn btn-primary" to={-1}>
+      <Link to={-1} className="btn btn-primary rounded-full">
         Go Back
       </Link>
     </div>
