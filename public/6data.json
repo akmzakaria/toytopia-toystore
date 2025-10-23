@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/31/20/11/lego-1297582_1280.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Barbie Dreamhouse",
+    "sellerName": "Happy Kids Shop",
+    "sellerEmail": "support@happykids.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "The ultimate dollhouse with lights, sounds, and a working elevator. Perfect for creative storytelling and playtime fun.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2018/01/15/07/51/barbie-3081031_1280.jpg",
+    "subCategory": "Dolls & Accessories"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Hot Wheels Mega Garage",
+    "sellerName": "Speedy Toys Hub",
+    "sellerEmail": "info@speedytoys.com",
+    "price": 59.99,
+    "rating": 4.6,
+    "availableQuantity": 62,
+    "description": "An exciting multi-level car garage for Hot Wheels enthusiasts. Includes ramps, parking spots, and racing loops.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/09/06/22/24/toy-car-2720488_1280.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Nerf Elite Blaster",
+    "sellerName": "FunZone Toy Mart",
+    "sellerEmail": "sales@funzonetoys.com",
+    "price": 39.99,
+    "rating": 4.5,
+    "availableQuantity": 90,
+    "description": "A powerful dart blaster designed for precision and distance. Comes with 20 foam darts for safe indoor and outdoor battles.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2020/03/22/22/34/toy-gun-4957016_1280.jpg",
+    "subCategory": "Action Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Play-Doh Creative Set",
+    "sellerName": "Crafty Kids Corner",
+    "sellerEmail": "hello@craftykids.com",
+    "price": 24.99,
+    "rating": 4.9,
+    "availableQuantity": 120,
+    "description": "Soft, colorful modeling clay with tools and molds. Encourages imaginative play and helps develop fine motor skills.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/02/01/10/37/play-doh-2035808_1280.jpg",
+    "subCategory": "Arts & Crafts"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Remote Control Monster Truck",
+    "sellerName": "Mega Toy World",
+    "sellerEmail": "contact@megaworld.com",
+    "price": 64.99,
+    "rating": 4.4,
+    "availableQuantity": 55,
+    "description": "A rugged RC monster truck with all-terrain tires and rechargeable battery. Delivers thrilling off-road adventures.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/18/23/25/toy-car-1996859_1280.jpg",
+    "subCategory": "Remote Control Toys"
+  }
+]
