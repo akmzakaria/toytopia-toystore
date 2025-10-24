@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/31/20/11/lego-1297582_1280.png",
+    "pictureURL": "../src/assets/house.webp",
     "subCategory": "Building Blocks"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.8,
     "availableQuantity": 40,
     "description": "The ultimate dollhouse with lights, sounds, and a working elevator. Perfect for creative storytelling and playtime fun.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2018/01/15/07/51/barbie-3081031_1280.jpg",
+    "pictureURL": "../src/assets//gun.webp",
     "subCategory": "Dolls & Accessories"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.6,
     "availableQuantity": 62,
     "description": "An exciting multi-level car garage for Hot Wheels enthusiasts. Includes ramps, parking spots, and racing loops.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/09/06/22/24/toy-car-2720488_1280.jpg",
+    "pictureURL": "../src/assets/green-black_car.webp",
     "subCategory": "Vehicles"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.5,
     "availableQuantity": 90,
     "description": "A powerful dart blaster designed for precision and distance. Comes with 20 foam darts for safe indoor and outdoor battles.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2020/03/22/22/34/toy-gun-4957016_1280.jpg",
+    "pictureURL": "https://img.icons8.com/?size=160&id=oOYuLHTKPySh&format=png",
     "subCategory": "Action Toys"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.9,
     "availableQuantity": 120,
     "description": "Soft, colorful modeling clay with tools and molds. Encourages imaginative play and helps develop fine motor skills.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/02/01/10/37/play-doh-2035808_1280.jpg",
+    "pictureURL": "https://img.icons8.com/?size=160&id=IdsC2yfNzb8W&format=png",
     "subCategory": "Arts & Crafts"
   },
   {
@@ -68,7 +68,32 @@
     "rating": 4.4,
     "availableQuantity": 55,
     "description": "A rugged RC monster truck with all-terrain tires and rechargeable battery. Delivers thrilling off-road adventures.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/18/23/25/toy-car-1996859_1280.jpg",
+    "pictureURL": "https://img.icons8.com/?size=160&id=gXvvFM28Mjvd&format=png",
     "subCategory": "Remote Control Toys"
+  },
+
+  {
+    "toyId": 7,
+    "toyName": "LEGO City Police Station",
+    "sellerName": "Brick Builders Hub",
+    "sellerEmail": "info@brickbuilders.com",
+    "price": 109.99,
+    "rating": 4.9,
+    "availableQuantity": 25,
+    "description": "A detailed police station building set featuring vehicles, jail cells, and mini-figures for imaginative city adventures.",
+    "pictureURL": "https://img.icons8.com/?size=96&id=13628&format=png",
+    "subCategory": "Building Sets"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Hot Wheels Super Track Set",
+    "sellerName": "ToyMania Store",
+    "sellerEmail": "sales@toymania.com",
+    "price": 59.99,
+    "rating": 4.6,
+    "availableQuantity": 50,
+    "description": "A high-speed racing track with multiple loops and launchers for Hot Wheels cars. Great for competitive fun!",
+    "pictureURL": "https://img.icons8.com/?size=160&id=GPcSqdZUPB1I&format=png",
+    "subCategory": "Vehicles & Tracks"
   }
 ]

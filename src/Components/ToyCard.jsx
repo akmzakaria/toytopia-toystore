@@ -8,7 +8,7 @@ const ToyCard = ({ toy }) => {
   return (
     <div>
       <div className="flex flex-col shadow rounded-xl w-[300px] md:w-[300px] gap-2 p-4 bg-white mt-5">
-        <img className="w-full rounded-2xl" src={img} />
+        <img className="w-full rounded-2xl" src={toy.pictureURL} />
         <h3 className=" text-[#001931] text-sm font-medium md:text-xl">{toy.toyName}</h3>
         <p className="text-[#001931] text-xs">Price: {toy.price}$</p>
         <div className="flex justify-between text-xs md:text-[1rem] font-medium">

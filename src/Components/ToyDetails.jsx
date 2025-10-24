@@ -27,7 +27,10 @@ const ToyDetails = () => {
         <title>ToyTopia - Toy Details</title>
         {/* toy details */}
         <div className="flex md:flex-row flex-col items-center md:gap-10 gap-5 p-5 md:p-15">
-          <img className="rounded-lg object-cover h-60 w-60 md:h-80 md:w-80 shadow-lg" src={img} />
+          <img
+            className="rounded-lg object-cover h-60 w-60 md:h-80 md:w-80 shadow-lg"
+            src={fltData.pictureURL}
+          />
 
           <div className="flex flex-col gap-3 md:gap-5">
             <h3 className="font-bold text-center md:text-start text-2xl md:text-3xl">

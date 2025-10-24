@@ -100,9 +100,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <Link onClick={handleLogOut} className="btn btn-secondary rounded-full px-10">
-              Log Out
-            </Link>
+            <div className="flex items-center gap-1">
+              <img className="w-10 rounded-full bg-base-300" src={user?.photoURL} alt="" />
+              <Link onClick={handleLogOut} className="btn btn-md btn-secondary rounded-full px-10">
+                Log Out
+              </Link>
+            </div>
           ) : (
             <Link to={'/login'} className="btn btn-primary rounded-full px-10">
               Login
