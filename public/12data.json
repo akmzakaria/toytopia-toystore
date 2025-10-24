@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
-    "pictureURL": "../src/assets/house.webp",
+    "pictureURL": "https://i.postimg.cc/fT8vS17X/house.webp",
     "subCategory": "Building Blocks"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.8,
     "availableQuantity": 40,
     "description": "The ultimate dollhouse with lights, sounds, and a working elevator. Perfect for creative storytelling and playtime fun.",
-    "pictureURL": "../src/assets//gun.webp",
+    "pictureURL": "https://i.postimg.cc/pdwCX8QX/gun.webp",
     "subCategory": "Dolls & Accessories"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.6,
     "availableQuantity": 62,
     "description": "An exciting multi-level car garage for Hot Wheels enthusiasts. Includes ramps, parking spots, and racing loops.",
-    "pictureURL": "../src/assets/green-black_car.webp",
+    "pictureURL": "https://i.postimg.cc/ncJW18Q2/green-black-car.webp",
     "subCategory": "Vehicles"
   },
   {

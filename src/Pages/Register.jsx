@@ -5,6 +5,24 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Register = () => {
+  const [error, setError] = useState({ uppercase: false, lowercase: false, six_char: false });
+  const [password, setPassword] = useState('');
+
+  const handlePassChange = (e) => {
+    const value = e.target.value;
+    setPassword(value);
+
+    if (!value) {
+      setError({ uppercase: false, lowercase: false, six_char: false });
+    } else {
+      setError({
+        uppercase: !/[A-Z]/.test(value),
+        lowercase: !/[a-z]/.test(value),
+        six_char: value.length < 6,
+      });
+    }
+  };
+
   const navigate = useNavigate();
 
   const { createUser, googleSignIn, setUser, updateUser, setLoading } = use(AuthContext);
@@ -143,6 +161,8 @@ const Register = () => {
                   <label className="label text-white">Password</label>
                   <div className="relative">
                     <input
+                      onChange={handlePassChange}
+                      value={password}
                       name="password"
                       type={show ? 'text' : 'password'}
                       className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
@@ -161,6 +181,18 @@ const Register = () => {
                       <input name="terms" type="checkbox" className="checkbox" />
                       Accept Our Terms & Conditions!
                     </label>
+                  </div>
+
+                  <div className="text-sm mb-3">
+                    {error?.uppercase && (
+                      <p className="text-red-500">Must include at least one uppercase letter!</p>
+                    )}
+                    {error?.lowercase && (
+                      <p className="text-red-500">Must include at least one lowercase letter!</p>
+                    )}
+                    {error?.six_char && (
+                      <p className="text-red-500">Must be at least six characters!</p>
+                    )}
                   </div>
 
                   <button type="submit" className="btn rounded-full btn-primary mt-4 w-full">

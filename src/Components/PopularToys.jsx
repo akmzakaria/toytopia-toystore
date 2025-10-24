@@ -12,7 +12,7 @@ const PopularToys = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-auto place-items-center gap-5">
-        {data.map((toy) => (
+        {data.slice(0, 6).map((toy) => (
           <div key={toy.toyId}>
             <ToyCard toy={toy}></ToyCard>
           </div>
