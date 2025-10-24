@@ -40,7 +40,7 @@ const Register = () => {
     setLoading(false);
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const url = e.target.url.value;
+    const url = e.target.url.value.trim();
     const password = e.target.password.value;
 
     createUser(email, password)
@@ -184,6 +184,7 @@ const Register = () => {
                     </label>
                   </div>
 
+                  {/* error messages */}
                   <div className="text-sm mb-3">
                     {error?.uppercase && (
                       <p className="text-error">Must include at least one uppercase letter!</p>
