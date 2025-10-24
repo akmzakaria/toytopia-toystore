@@ -99,18 +99,30 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          {user ? (
-            <div className="flex items-center gap-1">
-              <img className="w-10 rounded-full bg-base-300" src={user?.photoURL} alt="" />
+          <div className="flex items-center gap-1">
+            {user && (
+              <div>
+                {user.photoURL ? (
+                  <img className="w-10 rounded-full bg-base-300" src={user.photoURL} alt="" />
+                ) : (
+                  <img
+                    className="w-10 rounded-full bg-base-300"
+                    src={'https://img.icons8.com/?size=64&id=rrtYnzKMTlUr&format=png'}
+                    alt=""
+                  />
+                )}
+              </div>
+            )}
+            {user ? (
               <Link onClick={handleLogOut} className="btn btn-md btn-secondary rounded-full px-10">
                 Log Out
               </Link>
-            </div>
-          ) : (
-            <Link to={'/login'} className="btn btn-primary rounded-full px-10">
-              Login
-            </Link>
-          )}
+            ) : (
+              <Link to={'/login'} className="btn btn-primary rounded-full px-10">
+                Login
+              </Link>
+            )}
+          </div>
         </div>
       </div>
       {user && (

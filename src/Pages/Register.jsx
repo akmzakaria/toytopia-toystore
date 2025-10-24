@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const Register = () => {
   const [error, setError] = useState({ uppercase: false, lowercase: false, six_char: false });
   const [password, setPassword] = useState('');
+  const isPasswordValid = !error.uppercase && !error.lowercase && !error.six_char && password;
 
   const handlePassChange = (e) => {
     const value = e.target.value;
@@ -185,17 +186,21 @@ const Register = () => {
 
                   <div className="text-sm mb-3">
                     {error?.uppercase && (
-                      <p className="text-red-500">Must include at least one uppercase letter!</p>
+                      <p className="text-error">Must include at least one uppercase letter!</p>
                     )}
                     {error?.lowercase && (
-                      <p className="text-red-500">Must include at least one lowercase letter!</p>
+                      <p className="text-error">Must include at least one lowercase letter!</p>
                     )}
                     {error?.six_char && (
-                      <p className="text-red-500">Must be at least six characters!</p>
+                      <p className="text-error">Must be at least six characters!</p>
                     )}
                   </div>
 
-                  <button type="submit" className="btn rounded-full btn-primary mt-4 w-full">
+                  <button
+                    disabled={!isPasswordValid}
+                    type="submit"
+                    className=" rounded-full text-sm cursor-pointer font-bold h-10 bg-primary mt-4 w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
                     Register
                   </button>
 
