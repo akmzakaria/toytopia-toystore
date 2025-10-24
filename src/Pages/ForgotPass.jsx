@@ -29,6 +29,7 @@ const ForgotPass = () => {
 
   return (
     <div className="hero min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950">
+      <title>ToyTopia - Reset Password</title>
       <div className="hero-content flex-col">
         <h1 className="text-3xl font-bold text-white mb-4">Reset Password</h1>
 

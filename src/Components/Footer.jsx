@@ -40,7 +40,7 @@ const Footer = () => {
             <p className="mb-2">Customer Stories</p>
           </Link>
           <Link>
-            <p>Download Apps</p>
+            <p>Buy Products</p>
           </Link>
         </div>
 

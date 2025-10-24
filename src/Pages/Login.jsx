@@ -64,6 +64,7 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950">
+      <title>ToyTopia - Login</title>
       <div className="hero-content flex-col">
         <h1 className="text-3xl font-bold text-white mb-4">Login now!</h1>
         <div className="card w-full max-w-sm bg-black/50 backdrop-blur-lg rounded-2xl border border-purple-500/30 shadow-2xl p-6">
