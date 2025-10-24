@@ -4,7 +4,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className=" text-[#A1A1AA]">
+    <div className=" text-[#A1A1AA] bg-linear-to-b from-black/35 via-black/30 to-black/10">
       <div className="flex md:flex-row flex-col md:justify-around text-center max-w-[1400px] mx-auto gap-8 py-10">
         <div className="flex-2 flex-col">
           <h2 className="font-bold mb-3 text-white">ToyTopia</h2>

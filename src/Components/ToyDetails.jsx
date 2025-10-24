@@ -75,7 +75,7 @@ const ToyDetails = () => {
         </div>
 
         {/* form  */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center px-2 mt-10">
           <div className="card border w-full max-w-sm shadow-2xl rounded-2xl pt-5">
             <form onSubmit={handleSubmit} className="card-body">
               <fieldset className="fieldset space-y-3">

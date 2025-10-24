@@ -22,7 +22,7 @@ const PopularToys = () => {
       <div className="text-center mt-8 pb-12">
         <Link
           to="/alltoys"
-          className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] border-0 w-30 h-8 md:w-35 md:h-11 rounded-full"
+          className="btn bg-linear-to-r from-[#6d10ac] to-[#9c47d4] border-0 rounded-full"
         >
           Show All
         </Link>

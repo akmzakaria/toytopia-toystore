@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from '../Components/Slider';
 import PopularToys from '../Components/PopularToys';
 import StatsSection from '../Components/StatsSection';
-import MailUs from '../Components/MailUs';
+import MailUs from '../Components/Feedback';
+import Feedback from '../Components/Feedback';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <Slider></Slider>
       <PopularToys></PopularToys>
       <StatsSection></StatsSection>
-      <MailUs></MailUs>
+      <Feedback></Feedback>
     </div>
   );
 };

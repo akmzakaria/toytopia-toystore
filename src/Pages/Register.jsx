@@ -121,7 +121,7 @@ const Register = () => {
   return (
     <div>
       <title>ToyTopia - Register</title>
-      <div className="hero min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-3xl font-bold text-white">Register now!</h1>

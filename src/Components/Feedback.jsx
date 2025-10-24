@@ -1,7 +1,7 @@
 import { Send } from 'lucide-react';
 import React, { useState } from 'react';
 
-const MailUs = () => {
+const Feedback = () => {
   const [success, setSuccess] = useState('');
 
   const handleSubmit = (e) => {
@@ -12,11 +12,11 @@ const MailUs = () => {
   };
 
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center px-2 my-15">
       <div className="card border w-full max-w-sm md:max-w-lg lg:max-w-xl shadow-2xl rounded-2xl pt-5">
         <form onSubmit={handleSubmit} className="card-body">
           <fieldset className="fieldset space-y-3">
-            <h2 className="text-xl font-semibold text-center mb-2">Mail Us</h2>
+            <h2 className="text-xl font-semibold text-center mb-2">Send Feedback</h2>
 
             {/* email */}
             <label className="label font-medium">Email</label>
@@ -58,4 +58,4 @@ const MailUs = () => {
   );
 };
 
-export default MailUs;
+export default Feedback;

@@ -17,7 +17,7 @@ import gunImg2 from '../assets/gun2.jpg';
 
 const Slider = () => {
   return (
-    <div className="max-w-11/12 mx-auto">
+    <div className="max-w-11/12 mt-10 mx-auto">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation

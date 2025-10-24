@@ -6,7 +6,7 @@ const AllToys = () => {
   const data = useLoaderData();
 
   return (
-    <div className="max-w-[1400px] mx-auto">
+    <div className="max-w-[1400px] mx-auto mb-5">
       <title>ToyTopia - All Toys</title>
       <h1 className="mt-2 text-xl md:text-3xl text-center lg:text-5xl text-primary font-bold">
         All Toys
