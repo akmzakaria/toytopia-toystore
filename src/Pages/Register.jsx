@@ -138,6 +138,7 @@ const Register = () => {
                     type="text"
                     className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Name"
+                    required
                   />
 
                   {/* photoURL */}
@@ -156,6 +157,7 @@ const Register = () => {
                     type="email"
                     className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Email"
+                    required
                   />
 
                   {/* password */}
