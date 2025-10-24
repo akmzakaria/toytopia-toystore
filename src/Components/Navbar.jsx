@@ -63,7 +63,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-primary border-0 rounded-md btn-ghost lg:hidden"
+              className="btn hover:bg-primary border-0 rounded-md btn-ghost md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const Navbar = () => {
             ToyTopia
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">

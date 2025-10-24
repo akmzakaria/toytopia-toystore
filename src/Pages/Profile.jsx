@@ -45,7 +45,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950 flex items-center justify-center p-6 text-white">
+    <div className="min-h-screen  flex items-center justify-center p-6 text-white">
       <title>ToyTopia - Profile</title>
 
       <div className="bg-gray-900/80 backdrop-blur-xl border border-purple-500/30 shadow-[0_0_25px_rgba(168,85,247,0.3)] rounded-3xl p-8 w-full max-w-md text-center transition duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">

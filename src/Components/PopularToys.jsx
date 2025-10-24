@@ -11,7 +11,7 @@ const PopularToys = () => {
         Popular Toys
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 mx-4 md:mx-auto place-items-center gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-auto place-items-center gap-5">
         {data.map((toy) => (
           <div key={toy.toyId}>
             <ToyCard toy={toy}></ToyCard>
