@@ -98,7 +98,7 @@ const Login = () => {
             <Link
               to="/forgotpassword"
               state={{ email: emailInput }}
-              className="text-white link link-hover"
+              className="text-white text-xs link link-hover"
             >
               Forgot password?
             </Link>
@@ -139,7 +139,7 @@ const Login = () => {
             </button>
           </form>
 
-          <p className="text-white mt-4 text-center">
+          <p className="text-white mt-4 text-sm text-center">
             Don't have an account?{' '}
             <Link to="/register" className="underline text-purple-400">
               Register Now
