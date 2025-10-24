@@ -36,8 +36,8 @@ const Register = () => {
             setUser({ ...user, displayName: name, photoURL: url });
             navigate('/');
           })
-          .catch((err) => {
-            console.log(err.message);
+          .catch(() => {
+            // console.log(err.message);
           });
 
         toast.success('Registered Successfully!', {
@@ -51,9 +51,9 @@ const Register = () => {
         });
         setLoading(false);
       })
-      .catch((err) => {
-        console.log(err.message);
-        console.log(err.data);
+      .catch(() => {
+        // console.log(err.message);
+        // console.log(err.data);
         toast.warn('Unable to register. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
@@ -73,7 +73,7 @@ const Register = () => {
       .then((res) => {
         const user = res.user;
         setUser(user);
-        console.log(res.user);
+        // console.log(res.user);
         toast.success('Signed In Successfully!', {
           position: 'top-right',
           autoClose: 3000,
@@ -107,7 +107,7 @@ const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-3xl font-bold text-white">Register now!</h1>
           </div>
-          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-black/50 backdrop-blur-lg border rounded-2xl border-purple-500/30">
+          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-black/50 backdrop-blur-lg border rounded-2xl border-purple-500/30 ">
             <div className="card-body">
               {/* form */}
               <form onSubmit={handleRegister}>
@@ -117,7 +117,7 @@ const Register = () => {
                   <input
                     name="name"
                     type="text"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Name"
                   />
 
@@ -126,7 +126,7 @@ const Register = () => {
                   <input
                     name="url"
                     type="text"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your PhotoURL"
                   />
 
@@ -135,7 +135,7 @@ const Register = () => {
                   <input
                     name="email"
                     type="email"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Email"
                   />
 
@@ -145,7 +145,7 @@ const Register = () => {
                     <input
                       name="password"
                       type={show ? 'text' : 'password'}
-                      className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                      className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
                       placeholder="Enter Your Password"
                     />
                     <button
@@ -161,10 +161,6 @@ const Register = () => {
                       <input name="terms" type="checkbox" className="checkbox" />
                       Accept Our Terms & Conditions!
                     </label>
-                  </div>
-
-                  <div>
-                    <a className="link link-hover text-white">Forgot password?</a>
                   </div>
 
                   <button type="submit" className="btn rounded-full btn-primary mt-4 w-full">

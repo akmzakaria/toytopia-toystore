@@ -15,6 +15,9 @@ const Profile = () => {
 
     if (!name.trim() || !photoURL.trim()) {
       setStatus({ type: 'error', message: 'Please fill in all fields.' });
+      setTimeout(() => {
+        setStatus({ type: 'error', message: '' });
+      }, 3000);
       return;
     }
 
@@ -25,10 +28,16 @@ const Profile = () => {
       .then(() => {
         setUser((prev) => ({ ...prev, displayName: name, photoURL }));
         setStatus({ type: 'success', message: 'Profile updated successfully!' });
+        setTimeout(() => {
+          setStatus({ type: 'success', message: '' });
+        }, 3000);
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        // console.log(err);
         setStatus({ type: 'error', message: 'Error updating profile' });
+        setTimeout(() => {
+          setStatus({ type: 'error', message: '' });
+        }, 3000);
       })
       .finally(() => {
         setIsUpdating(false);

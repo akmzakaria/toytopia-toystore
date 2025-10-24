@@ -4,6 +4,7 @@ import img from '../assets/green-black_car.webp';
 import { MdEventAvailable, MdOutlinePriceCheck } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
 import { Send } from 'lucide-react';
+import { TiTick } from 'react-icons/ti';
 
 const ToyDetails = () => {
   const data = useLoaderData();
@@ -101,12 +102,10 @@ const ToyDetails = () => {
 
                 {/* success message */}
                 {success && (
-                  <p className="text-green-500 text-center font-medium mt-2 transition-all">
-                    <div className="flex gap-1">
-                      <Send />
-                      {success}
-                    </div>
-                  </p>
+                  <div className="text-green-500 flex gap-1 text-center font-medium mt-2 transition-all">
+                    <Send />
+                    {success}
+                  </div>
                 )}
 
                 <div className="flex justify-center">

@@ -10,6 +10,7 @@ import Register from '../Pages/Register';
 import Loading from '../Pages/Loading';
 import PrivateRoute from '../Provider/PrivateRoute';
 import Error404 from '../Pages/Error404';
+import ForgotPass from '../Pages/ForgotPass';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
     ),
     loader: () => fetch('/12data.json'),
     hydrateFallbackElement: <Loading></Loading>,
+  },
+
+  {
+    path: '/forgotpassword',
+    Component: ForgotPass,
   },
 
   {
