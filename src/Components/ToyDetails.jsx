@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
-import img from '../assets/green-black_car.webp';
 import { MdEventAvailable, MdOutlinePriceCheck } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
 import { Send } from 'lucide-react';
-import { TiTick } from 'react-icons/ti';
 
 const ToyDetails = () => {
   const data = useLoaderData();
@@ -22,7 +20,7 @@ const ToyDetails = () => {
   };
 
   return (
-    <div className="bg-linear-to-br from-black via-gray-900 to-purple-950 min-h-screen pb-5">
+    <div className="min-h-screen pb-5">
       <div className="max-w-5xl mx-auto">
         <title>ToyTopia - Toy Details</title>
         {/* toy details */}

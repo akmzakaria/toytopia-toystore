@@ -23,6 +23,18 @@ const router = createBrowserRouter([
         loader: () => fetch('/12data.json'),
         hydrateFallbackElement: <Loading></Loading>,
       },
+
+      {
+        path: 'toydetails/:id',
+        element: (
+          <PrivateRoute>
+            <ToyDetails></ToyDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch('/12data.json'),
+        hydrateFallbackElement: <Loading></Loading>,
+      },
+
       {
         path: '/profile',
         element: (
@@ -51,23 +63,12 @@ const router = createBrowserRouter([
         path: '/register',
         Component: Register,
       },
+
+      {
+        path: '/forgotpassword',
+        Component: ForgotPass,
+      },
     ],
-  },
-
-  {
-    path: 'toydetails/:id',
-    element: (
-      <PrivateRoute>
-        <ToyDetails></ToyDetails>
-      </PrivateRoute>
-    ),
-    loader: () => fetch('/12data.json'),
-    hydrateFallbackElement: <Loading></Loading>,
-  },
-
-  {
-    path: '/forgotpassword',
-    Component: ForgotPass,
   },
 
   {

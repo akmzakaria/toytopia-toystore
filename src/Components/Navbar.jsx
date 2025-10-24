@@ -100,19 +100,26 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-1">
+            {/* profile picture with hover name */}
             {user && (
-              <div>
+              <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
                 {user.photoURL ? (
-                  <img className="w-10 rounded-full bg-base-300" src={user.photoURL} alt="" />
+                  <img
+                    className="w-10 h-10 rounded-full bg-base-300 cursor-pointer object-cover"
+                    src={user.photoURL}
+                    alt="User"
+                  />
                 ) : (
                   <img
-                    className="w-10 rounded-full bg-base-300"
-                    src={'https://img.icons8.com/?size=64&id=rrtYnzKMTlUr&format=png'}
-                    alt=""
+                    className="w-10 h-10 rounded-full bg-base-300 cursor-pointer object-cover"
+                    src="https://img.icons8.com/?size=64&id=rrtYnzKMTlUr&format=png"
+                    alt="Default User"
                   />
                 )}
               </div>
             )}
+
+            {/* ---------------------------------- */}
             {user ? (
               <Link onClick={handleLogOut} className="btn btn-md btn-secondary rounded-full px-10">
                 Log Out

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import img from '../assets/green-black_car.webp';
 import { MdEventAvailable } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
 
