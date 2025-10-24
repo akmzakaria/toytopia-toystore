@@ -1,16 +1,29 @@
-# React + Vite
+# ToyTopia - Online Toy Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Purpose
 
-Currently, two official plugins are available:
+ToyTopia is an interactive online toy store where users can browse, view, and purchase toys. The website provides user authentication, a smooth UI experience, and modern design with responsive layouts, making shopping easy and enjoyable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL
 
-## React Compiler
+https://orchid-toystore-akm.web.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+- **User Registration & Login**: Email/password authentication and Google Sign-In using Firebase.
+- **Browse Toys**: Users can explore a collection of toys with detailed views.
+- **Responsive Design**: Works perfectly on mobile, tablet, and desktop.
+- **Interactive UI**: Smooth animations and sliders using Swiper for featured toys.
+- **Live Feedback**: Notifications for actions using React Toastify.
+- **Form Validation**: Password validation with live checks (uppercase, lowercase, minimum 6 characters).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack & NPM Packages Used
+
+- **React** – Front-end library for building the UI.
+- **React Router** – Page navigation and routing.
+- **Firebase** – Backend service for authentication and data storage.
+- **TailwindCSS** – Utility-first CSS framework for styling.
+- **DaisyUI** – TailwindCSS component library for buttons, forms, and cards.
+- **React Icons** – Pre-made icon components.
+- **React Toastify** – Toast notifications for feedback.
+- **Swiper** – Interactive carousel/slider for featured toys.
