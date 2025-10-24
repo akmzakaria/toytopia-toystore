@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const Register = () => {
   const navigate = useNavigate();
 
-  const { createUser, googleSignIn, setUser, updateUser } = use(AuthContext);
+  const { createUser, googleSignIn, setUser, updateUser, setLoading } = use(AuthContext);
 
   const [show, setShow] = useState(false);
 
@@ -18,6 +18,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    setLoading(false);
     const name = e.target.name.value;
     const email = e.target.email.value;
     const url = e.target.url.value;
@@ -28,6 +29,17 @@ const Register = () => {
         const user = res.user;
         setUser(user);
         console.log(user);
+
+        updateUser({ displayName: name, photoURL: url })
+          .then(() => {
+            // console.log(res.user);
+            setUser({ ...user, displayName: name, photoURL: url });
+            navigate('/');
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
+
         toast.success('Registered Successfully!', {
           position: 'top-right',
           autoClose: 3000,
@@ -37,20 +49,20 @@ const Register = () => {
           draggable: true,
           theme: 'dark',
         });
-
-        updateUser({ displayName: name, photoURL: url })
-          .then((res) => {
-            console.log(res.user);
-            setUser({ ...user, displayName: name, photoURL: url });
-            navigate('/');
-          })
-          .catch((err) => {
-            console.log(err.message);
-          });
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err.message);
         console.log(err.data);
+        toast.warn('Unable to register. Please try again!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
       });
   };
 
@@ -71,80 +83,98 @@ const Register = () => {
           draggable: true,
           theme: 'dark',
         });
+        navigate('/');
       })
       .catch((err) => {
         console.log(err.message);
+        toast.warn('Unable to signin. Please try again!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
       });
   };
 
   return (
     <div>
       <title>ToyTopia - Register</title>
-      <div className="hero min-h-screen">
+      <div className="hero min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl font-bold">Register now!</h1>
+            <h1 className="text-3xl font-bold text-white">Register now!</h1>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-black/50 backdrop-blur-lg border rounded-2xl border-purple-500/30">
             <div className="card-body">
               {/* form */}
               <form onSubmit={handleRegister}>
                 <fieldset className="fieldset">
                   {/* name */}
-                  <label className="label">Name</label>
-                  <input name="name" type="text" className="input" placeholder="Enter Your Name" />
+                  <label className="label text-white">Name</label>
+                  <input
+                    name="name"
+                    type="text"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                    placeholder="Enter Your Name"
+                  />
 
                   {/* photoURL */}
-                  <label className="label">Photo URL</label>
+                  <label className="label text-white">Photo URL</label>
                   <input
                     name="url"
                     type="text"
-                    className="input"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
                     placeholder="Enter Your PhotoURL"
                   />
 
                   {/* email */}
-                  <label className="label">Email</label>
+                  <label className="label text-white">Email</label>
                   <input
                     name="email"
                     type="email"
-                    className="input"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
                     placeholder="Enter Your Email"
                   />
 
                   {/* password */}
-                  <label className="label">Password</label>
+                  <label className="label text-white">Password</label>
                   <div className="relative">
                     <input
                       name="password"
                       type={show ? 'text' : 'password'}
-                      className="input"
+                      className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
                       placeholder="Enter Your Password"
                     />
                     <button
                       onClick={handleToggleEye}
-                      className="cursor-pointer absolute top-3 right-5"
+                      className="cursor-pointer absolute top-3 right-5 text-white"
                     >
                       {show ? <LuEyeClosed /> : <LuEye />}
                     </button>
                   </div>
+
                   <div>
-                    <label className="label">
+                    <label className="label text-white">
                       <input name="terms" type="checkbox" className="checkbox" />
                       Accept Our Terms & Conditions!
                     </label>
                   </div>
+
                   <div>
-                    <a className="link link-hover">Forgot password?</a>
+                    <a className="link link-hover text-white">Forgot password?</a>
                   </div>
-                  <button type="submit" className="btn rounded-full btn-primary mt-4">
+
+                  <button type="submit" className="btn rounded-full btn-primary mt-4 w-full">
                     Register
                   </button>
 
                   {/* google login */}
                   <button
                     onClick={handleSignInGoogle}
-                    className="btn rounded-full bg-white text-black border-[#e5e5e5]"
+                    className="btn rounded-full bg-white text-black border-[#e5e5e5] w-full mt-2 flex items-center justify-center gap-2"
                   >
                     <svg
                       aria-label="Google logo"
@@ -173,12 +203,11 @@ const Register = () => {
                     Login with Google
                   </button>
                 </fieldset>
-                {/* {error && <p className="text-red-700">{error}</p>} */}
-                {/* {success && <p className="text-green-600">Account created successfully!</p>} */}
               </form>
-              <p>
+
+              <p className="text-white mt-4 text-center">
                 Already have an account?{' '}
-                <Link className="underline text-primary" to="/login">
+                <Link className="underline text-purple-400" to="/login">
                   Login Now
                 </Link>
               </p>

@@ -8,12 +8,12 @@ import { ToastContainer } from 'react-toastify';
 
 const HomeLayout = () => {
   return (
-    <div>
+    <div className="bg-linear-to-br from-black via-gray-900 to-purple-950">
       <header className="sticky top-0 z-50">
         <Navbar></Navbar>
       </header>
 
-      <main className="">
+      <main>
         <Outlet></Outlet>
       </main>
 

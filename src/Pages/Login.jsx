@@ -28,7 +28,7 @@ const Login = () => {
         setUser(user);
         // console.log(user);
 
-        toast.success('Registered Successfully!', {
+        toast.success('LoggedIn Successfully!', {
           position: 'top-right',
           autoClose: 3000,
           hideProgressBar: false,
@@ -42,7 +42,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err.message);
-        toast.warn('Unable to register. Please try again!', {
+        toast.warn('Unable to login. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
           hideProgressBar: false,
@@ -90,50 +90,53 @@ const Login = () => {
   return (
     <div>
       <title>ToyTopia - Login</title>
-      <div className="hero min-h-screen">
+      <div className="hero min-h-screen bg-linear-to-br from-black via-gray-900 to-purple-950">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl font-bold">Login now!</h1>
+            <h1 className="text-3xl font-bold text-white">Login now!</h1>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-black/50 backdrop-blur-lg rounded-2xl border border-purple-500/30">
             <div className="card-body">
               {/* form */}
               <form onSubmit={handleLogIn}>
                 <fieldset className="fieldset">
-                  <label className="label">Email</label>
-                  <input name="email" type="email" className="input" placeholder="Email" />
-                  <label className="label">Password</label>
+                  <label className="label text-white">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
+                    placeholder="Email"
+                  />
+                  <label className="label text-white">Password</label>
                   <div className="relative">
                     <input
                       name="password"
                       type={show ? 'text' : 'password'}
-                      className="input"
+                      className="input bg-transparent border border-gray-600 text-white placeholder-gray-400"
                       placeholder="Password"
                     />
                     <button
                       onClick={handleToggleEye}
-                      className="cursor-pointer absolute top-3 right-5"
+                      className="cursor-pointer absolute top-3 right-5 text-white"
                     >
                       {show ? <LuEyeClosed /> : <LuEye />}
                     </button>
                   </div>
                   <div>
-                    <label className="label">
+                    <label className="label text-white">
                       <input name="terms" type="checkbox" className="checkbox" />
                       Accept Our Terms & Conditions!
                     </label>
                   </div>
                   <div>
-                    <a onClick={''} className="link link-hover">
-                      Forgot password?
-                    </a>
+                    <a className="link link-hover text-white">Forgot password?</a>
                   </div>
-                  <button className="btn rounded-full btn-primary mt-4">Login</button>
+                  <button className="btn rounded-full btn-primary mt-4 w-full">Login</button>
 
                   {/* google login */}
                   <button
                     onClick={handleSignInGoogle}
-                    className="btn rounded-full bg-white text-black border-[#e5e5e5]"
+                    className="btn rounded-full bg-white text-black border-[#e5e5e5] w-full mt-2 flex items-center justify-center gap-2"
                   >
                     <svg
                       aria-label="Google logo"
@@ -162,12 +165,10 @@ const Login = () => {
                     Login with Google
                   </button>
                 </fieldset>
-                {/* {error && <p className="text-red-700">{error}</p>} */}
-                {/* {success && <p className="text-green-600">Account created successfully!</p>} */}
               </form>
-              <p>
+              <p className="text-white mt-4 text-center">
                 Don't have an account?{' '}
-                <Link className="underline text-primary" to="/register">
+                <Link className="underline text-purple-400" to="/register">
                   Register Now
                 </Link>
               </p>
