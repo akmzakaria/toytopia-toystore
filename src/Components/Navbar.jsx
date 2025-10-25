@@ -64,7 +64,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-primary border-0 rounded-md btn-ghost md:hidden -ml-1 -mr-6"
+              className="btn hover:bg-primary border-0 rounded-md btn-ghost md:hidden -ml-1 -mr-3"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,14 +84,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm w-40 flex flex-col dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow "
+              className="menu menu-sm w-40 flex flex-col dropdown-content bg-black/50 rounded-box z-1 mt-3 p-2 shadow "
             >
               {links}
             </ul>
           </div>
           <Link
             to={'/'}
-            className="btn hover:bg-primary hover:border-0 hover:rounded-full bg-black border-0 rounded-full text-xl"
+            className="btn hover:bg-primary hover:border-0 hover:rounded-full active:bg-primary bg-black border-0 rounded-full text-xl"
           >
             <img className="w-10" src={appLogo} alt="" />
             ToyTopia
