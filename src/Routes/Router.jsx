@@ -25,17 +25,6 @@ const router = createBrowserRouter([
       },
 
       {
-        path: 'toydetails/:id',
-        element: (
-          <PrivateRoute>
-            <ToyDetails></ToyDetails>
-          </PrivateRoute>
-        ),
-        loader: () => fetch('/12data.json'),
-        hydrateFallbackElement: <Loading></Loading>,
-      },
-
-      {
         path: '/profile',
         element: (
           <PrivateRoute>
@@ -69,6 +58,19 @@ const router = createBrowserRouter([
         Component: ForgotPass,
       },
     ],
+  },
+
+  // implemented this route outside the children for not to show the navbar & footer in the toydetails' error404 element
+  {
+    path: 'toydetails/:id',
+    element: (
+      <PrivateRoute>
+        <ToyDetails></ToyDetails>
+      </PrivateRoute>
+    ),
+    loader: () => fetch('/12data.json'),
+    hydrateFallbackElement: <Loading></Loading>,
+    errorElement: <Error404></Error404>,
   },
 
   {

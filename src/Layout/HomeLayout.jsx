@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 
 const HomeLayout = () => {
   return (
-    <div className="bg-linear-to-br from-black via-gray-900 to-purple-950">
+    <div className={'bg-linear-to-br from-black via-gray-900 to-purple-950'}>
       <header className="sticky top-0 z-50 bg-black/90">
         <Navbar></Navbar>
       </header>
