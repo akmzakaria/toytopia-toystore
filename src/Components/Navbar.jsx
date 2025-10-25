@@ -101,7 +101,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             {/* profile picture with hover name */}
             {user && (
               <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
@@ -123,11 +123,11 @@ const Navbar = () => {
 
             {/* ---------------------------------- */}
             {user ? (
-              <Link onClick={handleLogOut} className="btn btn-md btn-secondary rounded-full px-10">
+              <Link onClick={handleLogOut} className="btn btn-secondary rounded-full px-5 md:px-10">
                 Log Out
               </Link>
             ) : (
-              <Link to={'/login'} className="btn btn-primary rounded-full px-10">
+              <Link to={'/login'} className="btn btn-primary rounded-full px-5 md:px-10">
                 Login
               </Link>
             )}
