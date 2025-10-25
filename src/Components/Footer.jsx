@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
 import './Footer.css';
+import { FaFacebook, FaXTwitter } from 'react-icons/fa6';
+import { BsLinkedin, BsTwitterX } from 'react-icons/bs';
+import { CgMail } from 'react-icons/cg';
+import appLogo from '/appLogo3.png';
 
 const Footer = () => {
   return (
     <div className=" text-[#A1A1AA] bg-linear-to-b from-black/35 via-black/30 to-black/10">
       <div className="flex md:flex-row flex-col md:justify-around text-center max-w-[1400px] mx-auto gap-8 py-10">
         <div className="flex-2 flex-col">
-          <h2 className="font-bold mb-3 text-white">ToyTopia</h2>
+          <div className="flex items-center gap-1 justify-center mb-3">
+            <img className="w-8" src={appLogo} alt="" />
+            <h2 className="font-bold  text-white">ToyTopia</h2>
+          </div>
 
           <p className="px-10 text-sm md:text-[1rem] md:px-0">
             ToyTopia — a magical world of fun and imagination! Discover a wide collection of
@@ -62,24 +69,30 @@ const Footer = () => {
           <h2 className="font-bold mb-3 text-white">Social Links</h2>
 
           <Link>
-            <p className="mb-2">
-              <i className="fa-brands fa-x-twitter"></i> x-twitter
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <BsTwitterX />
+              <p>x-twitter</p>
+            </div>
           </Link>
           <Link>
-            <p className="mb-2">
-              <i className="fa-brands fa-linkedin-in"></i> LinkedIn
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <BsLinkedin></BsLinkedin>
+              <p>LinkedIn</p>
+            </div>
           </Link>
           <Link>
-            <p className="mb-2">
-              <i className="fa-brands fa-facebook-f"></i> FaceBook
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <FaFacebook></FaFacebook>
+              <p>FaceBook</p>
+            </div>
           </Link>
           <Link>
-            <p>
-              <i className="fa-regular fa-envelope"></i> app.support@gmail.com
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <p className="text-xl">
+                <CgMail></CgMail>
+              </p>
+              <p>app.support@gmail.com</p>
+            </div>
           </Link>
         </div>
       </div>

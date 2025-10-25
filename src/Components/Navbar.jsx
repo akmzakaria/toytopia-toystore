@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
+import appLogo from '/appLogo3.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-primary border-0 rounded-md btn-ghost md:hidden"
+              className="btn hover:bg-primary border-0 rounded-md btn-ghost md:hidden -ml-1 -mr-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,6 +93,7 @@ const Navbar = () => {
             to={'/'}
             className="btn hover:bg-primary hover:border-0 hover:rounded-full bg-black border-0 rounded-full text-xl"
           >
+            <img className="w-10" src={appLogo} alt="" />
             ToyTopia
           </Link>
         </div>
