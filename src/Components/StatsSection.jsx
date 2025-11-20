@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const StatsSection = () => {
   return (
@@ -25,7 +25,7 @@ const StatsSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StatsSection;
+export default StatsSection
