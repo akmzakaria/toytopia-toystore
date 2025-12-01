@@ -11,6 +11,9 @@ import Loading from '../Pages/Loading'
 import PrivateRoute from '../Provider/PrivateRoute'
 import Error404 from '../Pages/Error404'
 import ForgotPass from '../Pages/ForgotPass'
+import Support from '../Pages/Support'
+import Contact from '../Pages/Contact'
+import AboutUs from '../Pages/AboutUs'
 
 const router = createBrowserRouter([
   {
@@ -52,6 +55,19 @@ const router = createBrowserRouter([
       {
         path: '/forgotpassword',
         Component: ForgotPass,
+      },
+
+      {
+        path: 'support',
+        Component: Support,
+      },
+      {
+        path: 'contact',
+        Component: Contact,
+      },
+      {
+        path: 'aboutUs',
+        Component: AboutUs,
       },
     ],
   },

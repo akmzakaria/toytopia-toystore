@@ -33,7 +33,7 @@ const Footer = () => {
             <p className="mb-2">Our Mission</p>
           </Link>
           <Link>
-            <p>Contact Saled</p>
+            <p>Contact Sales</p>
           </Link>
         </div>
 

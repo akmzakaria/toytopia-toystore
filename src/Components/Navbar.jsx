@@ -28,6 +28,21 @@ const Navbar = () => {
           </li>
         </>
       )}
+      <li>
+        <NavLink className={'text-black active:bg-black/15'} to={'/support'}>
+          Support
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className={'text-black active:bg-black/15'} to={'/contact'}>
+          Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className={'text-black active:bg-black/15'} to={'/aboutUs'}>
+          About Us
+        </NavLink>
+      </li>
     </nav>
   )
 
