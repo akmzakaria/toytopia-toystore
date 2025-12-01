@@ -1,9 +1,9 @@
-import React from 'react';
-import Slider from '../Components/Slider';
-import PopularToys from '../Components/PopularToys';
-import StatsSection from '../Components/StatsSection';
-import MailUs from '../Components/Feedback';
-import Feedback from '../Components/Feedback';
+import React from 'react'
+import Slider from '../Components/Slider'
+import PopularToys from '../Components/PopularToys'
+import StatsSection from '../Components/StatsSection'
+import MailUs from '../Components/Feedback'
+import Feedback from '../Components/Feedback'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <StatsSection></StatsSection>
       <Feedback></Feedback>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router';
-import './Footer.css';
-import { FaFacebook, FaXTwitter } from 'react-icons/fa6';
-import { BsLinkedin, BsTwitterX } from 'react-icons/bs';
-import { CgMail } from 'react-icons/cg';
-import appLogo from '/appLogo3.png';
+import React from 'react'
+import { Link } from 'react-router'
+import './Footer.css'
+import { FaFacebook, FaXTwitter } from 'react-icons/fa6'
+import { BsLinkedin, BsTwitterX } from 'react-icons/bs'
+import { CgMail } from 'react-icons/cg'
+import appLogo from '/appLogo3.png'
 
 const Footer = () => {
   return (
-    <div className=" text-[#A1A1AA] bg-linear-to-b from-black/35 via-black/30 to-black/10">
+    <div className=" text-black bg-black/25">
       <div className="flex md:flex-row flex-col md:justify-around text-center max-w-[1400px] mx-auto gap-8 py-10">
         <div className="flex-2 flex-col">
           <div className="flex items-center gap-1 justify-center mb-3">
             <img className="w-8" src={appLogo} alt="" />
-            <h2 className="font-bold  text-white">ToyTopia</h2>
+            <h2 className="font-bold">ToyTopia</h2>
           </div>
 
           <p className="px-10 text-sm md:text-[1rem] md:px-0">
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         <div className="flex-1 flex-col text-sm md:text-[1rem]">
-          <h2 className="font-bold mb-3 text-white">Company</h2>
+          <h2 className="font-bold mb-3 text-black">Company</h2>
 
           <Link>
             <p className="mb-2">About Us</p>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div className="flex-1 flex-col text-sm md:text-[1rem]">
-          <h2 className="font-bold mb-3 text-white">Services</h2>
+          <h2 className="font-bold mb-3 text-black">Services</h2>
 
           <Link>
             <p className="mb-2">Products & Services</p>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="flex-1 flex-col text-sm md:text-[1rem]">
-          <h2 className="font-bold mb-3 text-white">Information</h2>
+          <h2 className="font-bold mb-3 text-black">Information</h2>
 
           <Link>
             <p className="mb-2">Privacy Policy</p>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         <div className="flex-1 flex-col text-sm md:text-[1rem]">
-          <h2 className="font-bold mb-3 text-white">Social Links</h2>
+          <h2 className="font-bold mb-3 text-black">Social Links</h2>
 
           <Link>
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -102,7 +102,7 @@ const Footer = () => {
         © 2025 ToyToia. All rights reserved.
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -2,8 +2,8 @@ import React from 'react'
 
 const StatsSection = () => {
   return (
-    <div className="text-center p-10 md:p-20 bg-black/30 text-white ">
-      <div className="md:max-w-[1600px] mx-auto">
+    <div className="text-center p-10 md:p-20 bg-black/10 text-gray-800 rounded-2xl ">
+      <div className="md:max-w-[1600px] mx-auto ">
         <h1 className="mb-5 text-xl md:text-5xl font-bold">Trusted by Millions, Built for You</h1>
 
         <div className="flex flex-col md:flex-row md:justify-around gap-10">

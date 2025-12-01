@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router';
-import { MdEventAvailable } from 'react-icons/md';
-import { FaStar } from 'react-icons/fa';
+import React from 'react'
+import { Link } from 'react-router'
+import { MdEventAvailable } from 'react-icons/md'
+import { FaStar } from 'react-icons/fa'
 
 const ToyCard = ({ toy }) => {
   return (
     <div>
-      <div className="flex flex-col shadow rounded-xl w-[300px] md:w-[300px] gap-2 p-4 bg-purple-700/30  mt-5">
+      <div className="flex flex-col shadow rounded-xl w-[300px] md:w-[300px] gap-2 p-4 bg-white  mt-5">
         <img className="w-full rounded-2xl" src={toy.pictureURL} />
         <h3 className=" text-[#ffffff] text-sm font-medium md:text-xl">{toy.toyName}</h3>
         <p className="text-[#ffffff] text-xs">Price: {toy.price}$</p>
@@ -25,7 +25,7 @@ const ToyCard = ({ toy }) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ToyCard;
+export default ToyCard

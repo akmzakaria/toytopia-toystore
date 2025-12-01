@@ -1,54 +1,54 @@
-import React, { use, useState } from 'react';
-import { AuthContext } from '../Provider/AuthProvider';
-import { updateProfile } from 'firebase/auth';
-import { FaUserAlt } from 'react-icons/fa';
+import React, { use, useState } from 'react'
+import { AuthContext } from '../Provider/AuthProvider'
+import { updateProfile } from 'firebase/auth'
+import { FaUserAlt } from 'react-icons/fa'
 
 const Profile = () => {
-  const { user, setUser, auth } = use(AuthContext);
-  const [name, setName] = useState(user?.displayName || '');
-  const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
-  const [status, setStatus] = useState({ type: '', message: '' });
-  const [isUpdating, setIsUpdating] = useState(false);
+  const { user, setUser, auth } = use(AuthContext)
+  const [name, setName] = useState(user?.displayName || '')
+  const [photoURL, setPhotoURL] = useState(user?.photoURL || '')
+  const [status, setStatus] = useState({ type: '', message: '' })
+  const [isUpdating, setIsUpdating] = useState(false)
 
   const handleUpdateProfile = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!name.trim() || !photoURL.trim()) {
-      setStatus({ type: 'error', message: 'Please fill in all fields.' });
+      setStatus({ type: 'error', message: 'Please fill in all fields.' })
       setTimeout(() => {
-        setStatus({ type: 'error', message: '' });
-      }, 3000);
-      return;
+        setStatus({ type: 'error', message: '' })
+      }, 3000)
+      return
     }
 
-    setIsUpdating(true);
-    setStatus({ type: '', message: '' });
+    setIsUpdating(true)
+    setStatus({ type: '', message: '' })
 
     updateProfile(auth.currentUser, { displayName: name, photoURL })
       .then(() => {
-        setUser((prev) => ({ ...prev, displayName: name, photoURL }));
-        setStatus({ type: 'success', message: 'Profile updated successfully!' });
+        setUser((prev) => ({ ...prev, displayName: name, photoURL }))
+        setStatus({ type: 'success', message: 'Profile updated successfully!' })
         setTimeout(() => {
-          setStatus({ type: 'success', message: '' });
-        }, 3000);
+          setStatus({ type: 'success', message: '' })
+        }, 3000)
       })
       .catch(() => {
         // console.log(err);
-        setStatus({ type: 'error', message: 'Error updating profile' });
+        setStatus({ type: 'error', message: 'Error updating profile' })
         setTimeout(() => {
-          setStatus({ type: 'error', message: '' });
-        }, 3000);
+          setStatus({ type: 'error', message: '' })
+        }, 3000)
       })
       .finally(() => {
-        setIsUpdating(false);
-      });
-  };
+        setIsUpdating(false)
+      })
+  }
 
   return (
-    <div className="min-h-screen  flex items-center justify-center p-6 text-white">
+    <div className="mt-10 mb-30 flex items-center justify-center p-6 text-white">
       <title>ToyTopia - Profile</title>
 
-      <div className="bg-gray-900/80 backdrop-blur-xl border border-purple-500/30 shadow-[0_0_25px_rgba(168,85,247,0.3)] rounded-3xl p-8 w-full max-w-md text-center transition duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+      <div className="bg-white backdrop-blur-xl border border-purple-500/30 shadow-[0_0_25px_rgba(168,85,247,0.3)] rounded-3xl p-8 w-full max-w-md text-center transition duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
         {/* Profile Picture */}
         {user?.photoURL ? (
           <img
@@ -66,28 +66,28 @@ const Profile = () => {
         <h2 className="text-3xl font-bold text-purple-400 mb-1">
           {user?.displayName || 'Guest User'}
         </h2>
-        <p className="text-gray-400 mb-4">{user?.email || 'No email available'}</p>
+        <p className="text-gray-600 mb-4">{user?.email || 'No email available'}</p>
 
         {/* Update Form */}
         <form onSubmit={handleUpdateProfile} className="space-y-4 text-left">
           <div>
-            <label className="block text-sm font-semibold text-gray-300">Name</label>
+            <label className="block text-sm font-semibold text-gray-700">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 bg-black/50 border border-purple-600 rounded-lg focus:ring-2 focus:ring-purple-400 text-white outline-none"
+              className="w-full px-4 py-2 bg-black/10 border border-purple-600 text-black rounded-lg focus:ring-2 focus:ring-purple-400 outline-none"
               placeholder="Enter your name"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-300">Photo URL</label>
+            <label className="block text-sm font-semibold text-gray-700">Photo URL</label>
             <input
               type="text"
               value={photoURL}
               onChange={(e) => setPhotoURL(e.target.value)}
-              className="w-full px-4 py-2 bg-black/50 border border-purple-600 rounded-lg focus:ring-2 focus:ring-purple-400 text-white outline-none"
+              className="w-full px-4 py-2 bg-black/10 border border-purple-600 text-black rounded-lg focus:ring-2 focus:ring-purple-400 outline-none"
               placeholder="Enter new photo URL"
             />
           </div>
@@ -126,7 +126,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

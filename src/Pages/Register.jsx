@@ -1,63 +1,63 @@
-import React, { use, useState } from 'react';
-import { LuEye, LuEyeClosed } from 'react-icons/lu';
-import { Link, useNavigate } from 'react-router';
-import { AuthContext } from '../Provider/AuthProvider';
-import { toast } from 'react-toastify';
+import React, { use, useState } from 'react'
+import { LuEye, LuEyeClosed } from 'react-icons/lu'
+import { Link, useNavigate } from 'react-router'
+import { AuthContext } from '../Provider/AuthProvider'
+import { toast } from 'react-toastify'
 
 const Register = () => {
-  const [error, setError] = useState({ uppercase: false, lowercase: false, six_char: false });
-  const [password, setPassword] = useState('');
-  const isPasswordValid = !error.uppercase && !error.lowercase && !error.six_char && password;
+  const [error, setError] = useState({ uppercase: false, lowercase: false, six_char: false })
+  const [password, setPassword] = useState('')
+  const isPasswordValid = !error.uppercase && !error.lowercase && !error.six_char && password
 
   const handlePassChange = (e) => {
-    const value = e.target.value;
-    setPassword(value);
+    const value = e.target.value
+    setPassword(value)
 
     if (!value) {
-      setError({ uppercase: false, lowercase: false, six_char: false });
+      setError({ uppercase: false, lowercase: false, six_char: false })
     } else {
       setError({
         uppercase: !/[A-Z]/.test(value),
         lowercase: !/[a-z]/.test(value),
         six_char: value.length < 6,
-      });
+      })
     }
-  };
+  }
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const { createUser, googleSignIn, setUser, updateUser, setLoading } = use(AuthContext);
+  const { createUser, googleSignIn, setUser, updateUser, setLoading } = use(AuthContext)
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
   const handleToggleEye = (e) => {
-    e.preventDefault();
-    setShow(!show);
-  };
+    e.preventDefault()
+    setShow(!show)
+  }
 
   const handleRegister = (e) => {
-    e.preventDefault();
-    setLoading(false);
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const url = e.target.url.value.trim();
-    const password = e.target.password.value;
+    e.preventDefault()
+    setLoading(false)
+    const name = e.target.name.value
+    const email = e.target.email.value
+    const url = e.target.url.value.trim()
+    const password = e.target.password.value
 
     createUser(email, password)
       .then((res) => {
-        const user = res.user;
-        setUser(user);
-        console.log(user);
+        const user = res.user
+        setUser(user)
+        console.log(user)
 
         updateUser({ displayName: name, photoURL: url })
           .then(() => {
             // console.log(res.user);
-            setUser({ ...user, displayName: name, photoURL: url });
-            navigate('/');
+            setUser({ ...user, displayName: name, photoURL: url })
+            navigate('/')
           })
           .catch(() => {
             // console.log(err.message);
-          });
+          })
 
         toast.success('Registered Successfully!', {
           position: 'top-right',
@@ -67,8 +67,8 @@ const Register = () => {
           pauseOnHover: true,
           draggable: true,
           theme: 'dark',
-        });
-        setLoading(false);
+        })
+        setLoading(false)
       })
       .catch(() => {
         // console.log(err.message);
@@ -81,17 +81,17 @@ const Register = () => {
           pauseOnHover: true,
           draggable: true,
           theme: 'dark',
-        });
-      });
-  };
+        })
+      })
+  }
 
   const handleSignInGoogle = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     googleSignIn()
       .then((res) => {
-        const user = res.user;
-        setUser(user);
+        const user = res.user
+        setUser(user)
         // console.log(res.user);
         toast.success('Signed In Successfully!', {
           position: 'top-right',
@@ -101,11 +101,11 @@ const Register = () => {
           pauseOnHover: true,
           draggable: true,
           theme: 'dark',
-        });
-        navigate('/');
+        })
+        navigate('/')
       })
       .catch((err) => {
-        console.log(err.message);
+        console.log(err.message)
         toast.warn('Unable to signin. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
@@ -114,77 +114,77 @@ const Register = () => {
           pauseOnHover: true,
           draggable: true,
           theme: 'dark',
-        });
-      });
-  };
+        })
+      })
+  }
 
   return (
     <div>
       <title>ToyTopia - Register</title>
-      <div className="hero min-h-screen">
+      <div className="hero mt-10 mb-30">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl font-bold text-white">Register now!</h1>
+            <h1 className="text-3xl font-bold text-gray-700">Register now!</h1>
           </div>
-          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-black/50 backdrop-blur-lg border rounded-2xl border-purple-500/30 ">
+          <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-white backdrop-blur-lg border rounded-2xl border-purple-500/30 ">
             <div className="card-body">
               {/* form */}
               <form onSubmit={handleRegister}>
                 <fieldset className="fieldset">
                   {/* name */}
-                  <label className="label text-white">Name</label>
+                  <label className="label  text-gray-700">Name</label>
                   <input
                     name="name"
                     type="text"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
+                    className="input bg-transparent border border-gray-600  placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Name"
                     required
                   />
 
                   {/* photoURL */}
-                  <label className="label text-white">Photo URL</label>
+                  <label className="label  text-gray-700">Photo URL</label>
                   <input
                     name="url"
                     type="text"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
+                    className="input bg-transparent border border-gray-600  placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your PhotoURL"
                   />
 
                   {/* email */}
-                  <label className="label text-white">Email</label>
+                  <label className="label text-gray-700">Email</label>
                   <input
                     name="email"
                     type="email"
-                    className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
+                    className="input bg-transparent border border-gray-600  placeholder-gray-400 rounded-lg"
                     placeholder="Enter Your Email"
                     required
                   />
 
                   {/* password */}
-                  <label className="label text-white">Password</label>
+                  <label className="label  text-gray-700">Password</label>
                   <div className="relative">
                     <input
                       onChange={handlePassChange}
                       value={password}
                       name="password"
                       type={show ? 'text' : 'password'}
-                      className="input bg-transparent border border-gray-600 text-white placeholder-gray-400 rounded-lg"
+                      className="input bg-transparent border border-gray-600  placeholder-gray-400 rounded-lg"
                       placeholder="Enter Your Password"
                     />
                     <button
                       onClick={handleToggleEye}
-                      className="cursor-pointer absolute top-3 right-5 text-white"
+                      className="cursor-pointer absolute top-3 right-5 "
                     >
                       {show ? <LuEyeClosed /> : <LuEye />}
                     </button>
                   </div>
 
-                  <div>
-                    <label className="label text-white">
+                  {/* <div>
+                    <label className="label ">
                       <input name="terms" type="checkbox" className="checkbox" />
                       Accept Our Terms & Conditions!
                     </label>
-                  </div>
+                  </div> */}
 
                   {/* error messages */}
                   <div className="text-sm mb-3">
@@ -202,7 +202,7 @@ const Register = () => {
                   <button
                     disabled={!isPasswordValid}
                     type="submit"
-                    className=" rounded-full text-sm cursor-pointer font-bold h-10 bg-primary mt-4 w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="text-white rounded-full text-sm cursor-pointer font-bold h-10 bg-primary mt-4 w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Register
                   </button>
@@ -252,7 +252,7 @@ const Register = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

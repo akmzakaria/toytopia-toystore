@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 const Error404 = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-linear-to-br from-black via-gray-900 to-purple-950 text-white">
+    <div className="flex flex-col justify-center items-center h-screen bg-[#E8FFF5]">
       <title>Error404</title>
       <p className="text-xl">Error 404</p>
       <p>Page Not Found!</p>
@@ -11,7 +11,7 @@ const Error404 = () => {
         Go Back
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Error404;
+export default Error404

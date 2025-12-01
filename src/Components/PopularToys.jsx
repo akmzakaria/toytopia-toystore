@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link, useLoaderData } from 'react-router';
-import ToyCard from './ToyCard';
+import React from 'react'
+import { Link, useLoaderData } from 'react-router'
+import ToyCard from './ToyCard'
 
 const PopularToys = () => {
-  const data = useLoaderData();
+  const data = useLoaderData()
 
   return (
     <div className="max-w-[1400px] mx-auto">
@@ -11,8 +11,8 @@ const PopularToys = () => {
         Popular Toys
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-auto place-items-center px-5 gap-5">
-        {data.slice(0, 6).map((toy) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-4 md:mx-auto place-items-center px-5 gap-5">
+        {data.slice(0, 8).map((toy) => (
           <div key={toy.toyId}>
             <ToyCard toy={toy}></ToyCard>
           </div>
@@ -28,7 +28,7 @@ const PopularToys = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PopularToys;
+export default PopularToys

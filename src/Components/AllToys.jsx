@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link, useLoaderData } from 'react-router';
-import ToyCard from './ToyCard';
+import React from 'react'
+import { Link, useLoaderData } from 'react-router'
+import ToyCard from './ToyCard'
 
 const AllToys = () => {
-  const data = useLoaderData();
+  const data = useLoaderData()
 
   return (
     <div className="max-w-[1400px] mx-auto mb-5">
@@ -11,7 +11,7 @@ const AllToys = () => {
       <h1 className="mt-2 text-xl md:text-3xl text-center lg:text-5xl text-primary font-bold">
         All Toys
       </h1>
-      <div className="max-w-[1400px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-auto place-items-center px-5 gap-5">
+      <div className="max-w-[1400px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-4 md:mx-auto place-items-center px-5 gap-5">
         {data.map((toy) => (
           <div key={toy.toyId}>
             <ToyCard toy={toy}></ToyCard>
@@ -24,7 +24,7 @@ const AllToys = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AllToys;
+export default AllToys

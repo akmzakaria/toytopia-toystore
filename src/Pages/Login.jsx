@@ -1,95 +1,95 @@
-import React, { use, useState } from 'react';
-import { LuEye, LuEyeClosed } from 'react-icons/lu';
-import { Link, useLocation, useNavigate } from 'react-router';
-import { AuthContext } from '../Provider/AuthProvider';
-import { toast } from 'react-toastify';
+import React, { use, useState } from 'react'
+import { LuEye, LuEyeClosed } from 'react-icons/lu'
+import { Link, useLocation, useNavigate } from 'react-router'
+import { AuthContext } from '../Provider/AuthProvider'
+import { toast } from 'react-toastify'
 
 const Login = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { userLogIn, googleSignIn, setUser } = use(AuthContext);
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { userLogIn, googleSignIn, setUser } = use(AuthContext)
 
-  const [show, setShow] = useState(false);
-  const [emailInput, setEmailInput] = useState(''); // <-- store email state
+  const [show, setShow] = useState(false)
+  const [emailInput, setEmailInput] = useState('') // <-- store email state
 
   const handleToggleEye = (e) => {
-    e.preventDefault();
-    setShow(!show);
-  };
+    e.preventDefault()
+    setShow(!show)
+  }
 
   const handleLogIn = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    e.preventDefault()
+    const email = e.target.email.value
+    const password = e.target.password.value
 
     userLogIn(email, password)
       .then((res) => {
-        setUser(res.user);
+        setUser(res.user)
         toast.success('Logged In Successfully!', {
           position: 'top-right',
           autoClose: 3000,
           theme: 'dark',
-        });
-        navigate(`${location.state ? location.state : '/'}`);
+        })
+        navigate(`${location.state ? location.state : '/'}`)
       })
       .catch(() => {
         toast.warn('Unable to login. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
           theme: 'dark',
-        });
-      });
-  };
+        })
+      })
+  }
 
   const handleSignInGoogle = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     googleSignIn()
       .then((res) => {
-        setUser(res.user);
+        setUser(res.user)
         toast.success('Signed In Successfully!', {
           position: 'top-right',
           autoClose: 3000,
           theme: 'dark',
-        });
-        navigate(`${location.state ? location.state : '/'}`);
+        })
+        navigate(`${location.state ? location.state : '/'}`)
       })
       .catch(() => {
         toast.warn('Unable to sign in. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
           theme: 'dark',
-        });
-      });
-  };
+        })
+      })
+  }
 
   return (
-    <div className="hero min-h-screen">
+    <div className="hero mt-10 mb-30">
       <title>ToyTopia - Login</title>
       <div className="hero-content flex-col">
-        <h1 className="text-3xl font-bold text-white mb-4">Login now!</h1>
-        <div className="card w-full max-w-sm bg-black/50 backdrop-blur-lg rounded-2xl border border-purple-500/30 shadow-2xl p-6">
+        <h1 className="text-3xl font-bold text-gray-700 mb-4">Login now!</h1>
+        <div className="card w-full max-w-sm bg-white backdrop-blur-lg rounded-2xl border border-purple-500/30 shadow-2xl p-6">
           <form onSubmit={handleLogIn} className="flex flex-col gap-3">
-            <label className="text-white">Email</label>
+            <label className="">Email</label>
             <input
               name="email"
               type="email"
               placeholder="Email"
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              className="input bg-transparent border border-gray-600 text-white rounded-lg placeholder-gray-400"
+              className="input bg-transparent border border-gray-600  rounded-lg placeholder-gray-400"
               required
             />
 
-            <label className="text-white">Password</label>
+            <label className="">Password</label>
             <div className="relative">
               <input
                 name="password"
                 type={show ? 'text' : 'password'}
                 placeholder="Password"
-                className="input bg-transparent border border-gray-600 text-white rounded-lg placeholder-gray-400 w-full"
+                className="input bg-transparent border border-gray-600 rounded-lg placeholder-gray-400 w-full"
                 required
               />
-              <button onClick={handleToggleEye} className="absolute top-3 right-3 text-white">
+              <button onClick={handleToggleEye} className="absolute top-3 right-3 text-gray-700">
                 {show ? <LuEyeClosed /> : <LuEye />}
               </button>
             </div>
@@ -148,7 +148,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

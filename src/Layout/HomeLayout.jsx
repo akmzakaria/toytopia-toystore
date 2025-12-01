@@ -1,27 +1,29 @@
-import React from 'react';
-import Home from '../Pages/Home';
-import Navbar from '../Components/Navbar';
-import Profile from '../Pages/Profile';
-import { Outlet } from 'react-router';
-import Footer from '../Components/Footer';
-import { ToastContainer } from 'react-toastify';
+import React from 'react'
+import Home from '../Pages/Home'
+import Navbar from '../Components/Navbar'
+import Profile from '../Pages/Profile'
+import { Outlet } from 'react-router'
+import Footer from '../Components/Footer'
+import { ToastContainer } from 'react-toastify'
 
 const HomeLayout = () => {
   return (
-    <div className={'bg-linear-to-br from-black via-gray-900 to-purple-950'}>
-      <header className="sticky top-0 z-50 bg-black/90">
-        <Navbar></Navbar>
-      </header>
+    <div className="bg-[#E8FFF5]">
+      <div className={'bg-[#E8FFF5] '}>
+        <header className="sticky max-w-7xl mx-auto top-0 z-50">
+          <Navbar></Navbar>
+        </header>
 
-      <main>
-        <Outlet></Outlet>
-      </main>
+        <main className="max-w-7xl mx-auto">
+          <Outlet></Outlet>
+        </main>
 
-      <footer>
-        <Footer></Footer>
-      </footer>
+        <footer>
+          <Footer></Footer>
+        </footer>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomeLayout;
+export default HomeLayout

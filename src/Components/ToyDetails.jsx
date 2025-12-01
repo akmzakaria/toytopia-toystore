@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router';
-import { MdEventAvailable, MdOutlinePriceCheck } from 'react-icons/md';
-import { FaStar } from 'react-icons/fa';
-import { Send } from 'lucide-react';
-import Error404 from '../Pages/Error404';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import React, { useState } from 'react'
+import { Link, useLoaderData, useParams } from 'react-router'
+import { MdEventAvailable, MdOutlinePriceCheck } from 'react-icons/md'
+import { FaStar } from 'react-icons/fa'
+import { Send } from 'lucide-react'
+import Error404 from '../Pages/Error404'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 const ToyDetails = () => {
-  const data = useLoaderData();
-  const { id } = useParams();
+  const data = useLoaderData()
+  const { id } = useParams()
 
-  const fltData = data.find((data) => data.toyId == id);
-  const [success, setSuccess] = useState('');
+  const fltData = data.find((data) => data.toyId == id)
+  const [success, setSuccess] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setSuccess('Successfully Submitted!');
-    e.target.reset();
-    setTimeout(() => setSuccess(''), 5000);
-  };
+    e.preventDefault()
+    setSuccess('Successfully Submitted!')
+    e.target.reset()
+    setTimeout(() => setSuccess(''), 5000)
+  }
 
   return (
-    <div>
-      <div className={'bg-linear-to-br from-black via-gray-900 to-purple-950'}>
-        <header className="sticky top-0 z-50 bg-black/90">
+    <div className="">
+      <div className={'bg-[#E8FFF5]'}>
+        <header className="sticky max-w-7xl mx-auto top-0 z-50 ">
           <Navbar></Navbar>
         </header>
 
-        <main>
-          <div className="min-h-screen pb-5">
+        <main className="max-w-7xl mx-auto">
+          <div className="min-h-screen pb-5 bg-[#E8FFF5]">
             <div className="max-w-5xl mx-auto">
               <title>ToyTopia - Toy Details</title>
               {/* toy details */}
@@ -40,16 +40,18 @@ const ToyDetails = () => {
                 />
 
                 <div className="flex flex-col gap-3 md:gap-5">
-                  <h3 className="font-bold text-center md:text-start text-2xl md:text-3xl">
+                  <h3 className="font-bold text-black text-center md:text-start text-2xl md:text-3xl">
                     {fltData.toyName}
                   </h3>
-                  <p className="text-sm text-center md:text-left text-gray-400">
-                    Category: <span className="font-medium text-white">{fltData.subCategory}</span>
+                  <p className="text-sm text-center md:text-left text-gray-700">
+                    Category:{' '}
+                    <span className="font-medium text-gray-600">{fltData.subCategory}</span>
                   </p>
-                  <p className="text-sm md:text-lg text-center md:text-start text-gray-300">
-                    Seller: <span className="text-white font-semibold">{fltData.sellerName}</span>
+                  <p className="text-sm md:text-lg text-center md:text-start text-gray-700">
+                    Seller:{' '}
+                    <span className="text-gray-700 font-semibold">{fltData.sellerName}</span>
                   </p>
-                  <p className="text-sm md:text-lg text-center md:text-start text-gray-300">
+                  <p className="text-sm md:text-lg text-center md:text-start text-gray-700">
                     Email:{' '}
                     <span className="text-[#753de8] font-semibold">{fltData.sellerEmail}</span>
                   </p>
@@ -60,10 +62,12 @@ const ToyDetails = () => {
                         <MdEventAvailable className="text-2xl" />
                         <p className="text-sm">Available</p>
                       </div>
-                      <h1 className="font-extrabold md:text-3xl">{fltData.availableQuantity}</h1>
+                      <h1 className="font-extrabold text-black md:text-3xl">
+                        {fltData.availableQuantity}
+                      </h1>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center md:gap-2">
+                    <div className="flex text-black flex-col justify-center items-center md:gap-2">
                       <div className="flex gap-1 items-center text-yellow-400">
                         <FaStar className="text-2xl" />
                         <p className="text-sm">Ratings</p>
@@ -71,7 +75,7 @@ const ToyDetails = () => {
                       <h1 className="font-extrabold md:text-3xl">{fltData.rating}</h1>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center md:gap-2">
+                    <div className="flex text-black flex-col justify-center items-center md:gap-2">
                       <div className="flex gap-1 items-center text-[#753de8]">
                         <MdOutlinePriceCheck className="text-3xl" />
                         <p className="text-sm">Price</p>
@@ -80,23 +84,25 @@ const ToyDetails = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mt-3">{fltData.description}</p>
+                  <p className="text-gray-700 mt-3">{fltData.description}</p>
                 </div>
               </div>
 
               {/* form  */}
               <div className="flex justify-center px-2 mt-10">
-                <div className="card border w-full max-w-sm shadow-2xl rounded-2xl pt-5">
+                <div className="card border w-full max-w-sm shadow-2xl rounded-2xl text-gray-700 pt-5">
                   <form onSubmit={handleSubmit} className="card-body">
                     <fieldset className="fieldset space-y-3">
-                      <h2 className="text-xl font-semibold text-center mb-2">Try It Out</h2>
+                      <h2 className="text-xl font-semibold text-center mb-2 text-gray-700">
+                        Try It Out
+                      </h2>
 
                       {/* name */}
                       <label className="label font-medium">Name</label>
                       <input
                         name="name"
                         type="text"
-                        className="w-full px-4 py-3 bg-black/30 border border-purple-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-400 outline-none"
+                        className="w-full px-4 py-3 bg-black/10 border border-purple-600 rounded-lg placeholder-gray-400 focus:ring-2 focus:ring-purple-400 outline-none"
                         placeholder="Enter your name"
                         required
                       />
@@ -106,7 +112,7 @@ const ToyDetails = () => {
                       <input
                         name="email"
                         type="email"
-                        className="w-full px-4 py-3 bg-black/30 border border-purple-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-400 outline-none"
+                        className="w-full px-4 py-3 bg-black/10 border border-purple-600 rounded-lg placeholder-gray-400 focus:ring-2 focus:ring-purple-400 outline-none"
                         placeholder="Enter your email"
                         required
                       />
@@ -140,12 +146,12 @@ const ToyDetails = () => {
           </div>
         </main>
 
-        <footer>
+        <footer className="bg-[#E8FFF5] w-full">
           <Footer></Footer>
         </footer>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ToyDetails;
+export default ToyDetails
