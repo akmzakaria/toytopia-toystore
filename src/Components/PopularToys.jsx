@@ -20,10 +20,7 @@ const PopularToys = () => {
       </div>
 
       <div className="text-center mt-8 pb-12">
-        <Link
-          to="/alltoys"
-          className="btn bg-linear-to-r from-[#6d10ac] to-[#9c47d4] border-0 rounded-full"
-        >
+        <Link to="/alltoys" className="btn btn-primary rounded-full mt-4 w-fit">
           Show All
         </Link>
       </div>

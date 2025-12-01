@@ -28,7 +28,7 @@ const Login = () => {
         toast.success('Logged In Successfully!', {
           position: 'top-right',
           autoClose: 3000,
-          theme: 'dark',
+          theme: 'light',
         })
         navigate(`${location.state ? location.state : '/'}`)
       })
@@ -36,7 +36,7 @@ const Login = () => {
         toast.warn('Unable to login. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
-          theme: 'dark',
+          theme: 'light',
         })
       })
   }
@@ -49,7 +49,7 @@ const Login = () => {
         toast.success('Signed In Successfully!', {
           position: 'top-right',
           autoClose: 3000,
-          theme: 'dark',
+          theme: 'light',
         })
         navigate(`${location.state ? location.state : '/'}`)
       })
@@ -57,7 +57,7 @@ const Login = () => {
         toast.warn('Unable to sign in. Please try again!', {
           position: 'top-right',
           autoClose: 3000,
-          theme: 'dark',
+          theme: 'light',
         })
       })
   }

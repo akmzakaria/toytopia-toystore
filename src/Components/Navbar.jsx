@@ -42,7 +42,7 @@ const Navbar = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
         setUser(null)
         navigate('/login')
@@ -55,7 +55,7 @@ const Navbar = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
       })
   }
@@ -129,12 +129,12 @@ const Navbar = () => {
             {user ? (
               <Link
                 onClick={handleLogOut}
-                className="btn mr-5 btn-secondary rounded-full px-5 md:px-10"
+                className="btn md:mr-5 btn-secondary rounded-full px-5 md:px-10"
               >
                 Log Out
               </Link>
             ) : (
-              <Link to={'/login'} className="btn btn-primary rounded-full px-5 md:px-10">
+              <Link to={'/login'} className="btn md:mr-5 btn-primary rounded-full px-5 md:px-10">
                 Login
               </Link>
             )}

@@ -66,7 +66,7 @@ const Register = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
         setLoading(false)
       })
@@ -80,7 +80,7 @@ const Register = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
       })
   }
@@ -100,7 +100,7 @@ const Register = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
         navigate('/')
       })
@@ -113,7 +113,7 @@ const Register = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: 'dark',
+          theme: 'light',
         })
       })
   }
