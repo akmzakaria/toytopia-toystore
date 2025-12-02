@@ -85,7 +85,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <div data-aos="zoom-out-down" className="navbar rounded-full bg-[#E8FFF5] shadow-sm">
+      <div
+        data-aos="zoom-out-down"
+        data-aos-anchor-placement="bottom-bottom"
+        className="navbar rounded-full bg-[#E8FFF5] shadow-sm"
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div

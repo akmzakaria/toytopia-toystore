@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from '../Components/Slider'
 import PopularToys from '../Components/PopularToys'
 import StatsSection from '../Components/StatsSection'
@@ -6,13 +6,20 @@ import MailUs from '../Components/Feedback'
 import Feedback from '../Components/Feedback'
 import { AuthContext } from '../Provider/AuthProvider'
 import Loading from './Loading'
-import { useNavigation } from 'react-router'
 
 const Home = () => {
-  const navigation = useNavigation()
+  const [loading, setLoading] = useState(true)
 
-  if (navigation.state === 'loading') {
-    return <Loading></Loading>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loading />
   }
 
   return (

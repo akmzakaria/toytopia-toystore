@@ -7,6 +7,7 @@ import Error404 from '../Pages/Error404'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Aos from 'aos'
+import Loading from '../Pages/Loading'
 
 const ToyDetails = () => {
   const data = useLoaderData()
@@ -28,6 +29,21 @@ const ToyDetails = () => {
       once: false,
     })
   }, [])
+
+  // loading
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <div>

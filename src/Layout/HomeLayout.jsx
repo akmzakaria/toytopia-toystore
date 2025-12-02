@@ -5,6 +5,7 @@ import Profile from '../Pages/Profile'
 import { Outlet } from 'react-router'
 import Footer from '../Components/Footer'
 import { ToastContainer } from 'react-toastify'
+import Loading from '../Pages/Loading'
 
 const HomeLayout = () => {
   return (

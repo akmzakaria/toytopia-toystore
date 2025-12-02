@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData, useNavigation } from 'react-router'
 import ToyCard from './ToyCard'
 import Aos from 'aos'
@@ -14,10 +14,24 @@ const AllToys = () => {
     })
   }, [])
 
-  const navigation = useNavigation()
+  // const navigation = useNavigation()
 
-  if (navigation.state === 'loading') {
-    return <Loading></Loading>
+  // if (navigation.state === 'loading') {
+  //   return <Loading></Loading>
+  // }
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loading />
   }
 
   return (
