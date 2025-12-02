@@ -62,7 +62,7 @@ const Profile = () => {
 
   return (
     <div data-aos="zoom-in" className="mt-10 mb-30 flex items-center justify-center p-6 text-white">
-      <title>ToyTopia - Profile</title>
+      <title>ToyZone - Profile</title>
 
       <div className="bg-white backdrop-blur-xl border border-purple-500/30 shadow-[0_0_25px_rgba(168,85,247,0.3)] rounded-3xl p-8 w-full max-w-md text-center transition duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
         {/* Profile Picture */}
@@ -136,7 +136,7 @@ const Profile = () => {
 
         <div className="mt-6 text-sm text-gray-400 text-center">
           <p>
-            Welcome to <span className="text-purple-400 font-semibold">ToyTopia</span>
+            Welcome to <span className="text-purple-400 font-semibold">ToyZone</span>
           </p>
           <p>Where imagination shines bright!</p>
         </div>

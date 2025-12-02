@@ -1,35 +1,35 @@
-import React, { use, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
-import { AuthContext } from '../Provider/AuthProvider';
-import { toast } from 'react-toastify';
+import React, { use, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router'
+import { AuthContext } from '../Provider/AuthProvider'
+import { toast } from 'react-toastify'
 
 const ForgotPass = () => {
-  const navigate = useNavigate();
-  const { fotgotpass } = use(AuthContext);
+  const navigate = useNavigate()
+  const { fotgotpass } = use(AuthContext)
 
-  const location = useLocation();
-  const [email, setEmail] = useState(location.state?.email || '');
+  const location = useLocation()
+  const [email, setEmail] = useState(location.state?.email || '')
 
   const handleReset = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // Redirect to Gmail with pre-filled "To" field
     // window.open(`https://mail.google.com/mail/?view=cm&to=${email}`, '_blank');
 
     fotgotpass(email)
       .then(() => {
-        toast.info('Reset email sent! Please check your email.');
+        toast.info('Reset email sent! Please check your email.')
         setTimeout(() => {
-          window.open('https://mail.google.com/mail/u/0/#inbox', '_blank');
-        }, 2000);
+          window.open('https://mail.google.com/mail/u/0/#inbox', '_blank')
+        }, 2000)
       })
       .catch(() => {
-        toast.warn('Something went wrong! Please try again later.');
-      });
-  };
+        toast.warn('Something went wrong! Please try again later.')
+      })
+  }
 
   return (
     <div className="hero min-h-screen">
-      <title>ToyTopia - Reset Password</title>
+      <title>ToyZone - Reset Password</title>
       <div className="hero-content flex-col">
         <h1 className="text-3xl font-bold text-white mb-4">Reset Password</h1>
 
@@ -59,7 +59,7 @@ const ForgotPass = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ForgotPass;
+export default ForgotPass

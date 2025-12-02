@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="flex-2 flex-col">
           <div className="flex items-center gap-1 justify-center mb-3">
             <img className="w-8" src={appLogo} alt="" />
-            <h2 className="font-bold">ToyTopia</h2>
+            <h2 className="font-bold">ToyZone</h2>
           </div>
 
           <p className="px-10 text-sm md:text-[1rem] md:px-0">
-            ToyTopia — a magical world of fun and imagination! Discover a wide collection of
+            ToyZone — a magical world of fun and imagination! Discover a wide collection of
             exciting, safe, and creative toys for kids of all ages. From cars to action figures,
             puzzles to plushies — every toy brings joy and adventure!
           </p>

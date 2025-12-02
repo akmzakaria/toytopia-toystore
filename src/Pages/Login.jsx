@@ -72,7 +72,7 @@ const Login = () => {
 
   return (
     <div data-aos="zoom-in" className="hero mt-10 mb-30">
-      <title>ToyTopia - Login</title>
+      <title>ToyZone - Login</title>
       <div className="hero-content flex-col">
         <h1 className="text-3xl font-bold text-gray-700 mb-4">Login now!</h1>
         <div className="card w-full max-w-sm bg-white backdrop-blur-lg rounded-2xl border border-purple-500/30 shadow-2xl p-6">

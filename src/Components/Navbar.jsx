@@ -121,7 +121,7 @@ const Navbar = () => {
             className="btn text-gray-700 hover:bg-black/5 hover:border-0 hover:rounded-full active:bg-black/15 bg-[#E8FFF5] border-0 rounded-full text-xl"
           >
             <img className="w-10" src={appLogo} alt="" />
-            ToyTopia
+            ToyZone
           </Link>
         </div>
         <div className="navbar-center hidden md:flex">

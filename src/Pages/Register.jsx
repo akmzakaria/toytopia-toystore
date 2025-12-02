@@ -128,7 +128,7 @@ const Register = () => {
 
   return (
     <div data-aos="zoom-in">
-      <title>ToyTopia - Register</title>
+      <title>ToyZone - Register</title>
       <div className="hero mt-10 mb-30">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">

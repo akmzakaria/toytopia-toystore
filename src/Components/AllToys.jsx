@@ -22,7 +22,7 @@ const AllToys = () => {
 
   return (
     <div className="max-w-[1400px] mx-auto mb-5">
-      <title>ToyTopia - All Toys</title>
+      <title>ToyZone - All Toys</title>
       <h1
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"

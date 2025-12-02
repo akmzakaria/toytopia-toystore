@@ -39,7 +39,7 @@ const ToyDetails = () => {
         <main className="max-w-7xl mx-auto">
           <div className=" pb-5 bg-[#E8FFF5]">
             <div className="max-w-5xl mx-auto">
-              <title>ToyTopia - Toy Details</title>
+              <title>ToyZone - Toy Details</title>
               {/* toy details */}
               <div
                 data-aos="fade-up"

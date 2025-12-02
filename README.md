@@ -1,8 +1,8 @@
-# ToyTopia - Online Toy Store
+# ToyZone - Online Toy Store
 
 ## Project Purpose
 
-ToyTopia is an interactive online toy store where users can browse, view, and purchase toys. The website provides user authentication, a smooth UI experience, and modern design with responsive layouts, making shopping easy and enjoyable.
+ToyZone is an interactive online toy store where users can browse, view, and purchase toys. The website provides user authentication, a smooth UI experience, and modern design with responsive layouts, making shopping easy and enjoyable.
 
 ## Live URL
 
