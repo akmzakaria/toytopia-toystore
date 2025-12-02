@@ -1,7 +1,8 @@
-import React, { use, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { AuthContext } from '../Provider/AuthProvider'
 import { updateProfile } from 'firebase/auth'
 import { FaUserAlt } from 'react-icons/fa'
+import Aos from 'aos'
 
 const Profile = () => {
   const { user, setUser, auth } = use(AuthContext)
@@ -44,8 +45,15 @@ const Profile = () => {
       })
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
+  }, [])
+
   return (
-    <div className="mt-10 mb-30 flex items-center justify-center p-6 text-white">
+    <div data-aos="zoom-in" className="mt-10 mb-30 flex items-center justify-center p-6 text-white">
       <title>ToyTopia - Profile</title>
 
       <div className="bg-white backdrop-blur-xl border border-purple-500/30 shadow-[0_0_25px_rgba(168,85,247,0.3)] rounded-3xl p-8 w-full max-w-md text-center transition duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">

@@ -1,8 +1,9 @@
-import React, { use, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { LuEye, LuEyeClosed } from 'react-icons/lu'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { AuthContext } from '../Provider/AuthProvider'
 import { toast } from 'react-toastify'
+import Aos from 'aos'
 
 const Login = () => {
   const location = useLocation()
@@ -62,8 +63,15 @@ const Login = () => {
       })
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
+  }, [])
+
   return (
-    <div className="hero mt-10 mb-30">
+    <div data-aos="zoom-in" className="hero mt-10 mb-30">
       <title>ToyTopia - Login</title>
       <div className="hero-content flex-col">
         <h1 className="text-3xl font-bold text-gray-700 mb-4">Login now!</h1>

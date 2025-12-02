@@ -1,8 +1,9 @@
-import React, { use, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { LuEye, LuEyeClosed } from 'react-icons/lu'
 import { Link, useNavigate } from 'react-router'
 import { AuthContext } from '../Provider/AuthProvider'
 import { toast } from 'react-toastify'
+import Aos from 'aos'
 
 const Register = () => {
   const [error, setError] = useState({ uppercase: false, lowercase: false, six_char: false })
@@ -118,8 +119,15 @@ const Register = () => {
       })
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
+  }, [])
+
   return (
-    <div>
+    <div data-aos="zoom-in">
       <title>ToyTopia - Register</title>
       <div className="hero mt-10 mb-30">
         <div className="hero-content flex-col">
