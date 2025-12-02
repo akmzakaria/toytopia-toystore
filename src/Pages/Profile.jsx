@@ -3,6 +3,8 @@ import { AuthContext } from '../Provider/AuthProvider'
 import { updateProfile } from 'firebase/auth'
 import { FaUserAlt } from 'react-icons/fa'
 import Aos from 'aos'
+import { useNavigation } from 'react-router'
+import Loading from './Loading'
 
 const Profile = () => {
   const { user, setUser, auth } = use(AuthContext)
@@ -51,6 +53,12 @@ const Profile = () => {
       once: true,
     })
   }, [])
+
+  const navigation = useNavigation()
+
+  if (navigation.state === 'loading') {
+    return <Loading></Loading>
+  }
 
   return (
     <div data-aos="zoom-in" className="mt-10 mb-30 flex items-center justify-center p-6 text-white">

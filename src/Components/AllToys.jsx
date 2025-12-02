@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import { Link, useLoaderData } from 'react-router'
+import { Link, useLoaderData, useNavigation } from 'react-router'
 import ToyCard from './ToyCard'
 import Aos from 'aos'
+import Loading from '../Pages/Loading'
 
 const AllToys = () => {
   const data = useLoaderData()
@@ -12,6 +13,12 @@ const AllToys = () => {
       once: false,
     })
   }, [])
+
+  const navigation = useNavigation()
+
+  if (navigation.state === 'loading') {
+    return <Loading></Loading>
+  }
 
   return (
     <div className="max-w-[1400px] mx-auto mb-5">
