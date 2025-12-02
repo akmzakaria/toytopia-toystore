@@ -1,5 +1,6 @@
+import Aos from 'aos'
 import { Send } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Feedback = () => {
   const [success, setSuccess] = useState('')
@@ -11,8 +12,15 @@ const Feedback = () => {
     setTimeout(() => setSuccess(''), 5000)
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: false,
+    })
+  }, [])
+
   return (
-    <div className="flex justify-center px-2 my-15">
+    <div data-aos="zoom-in" className="flex justify-center px-2 my-15">
       <div className="card border w-full max-w-sm md:max-w-lg lg:max-w-xl shadow-2xl rounded-2xl pt-5">
         <form onSubmit={handleSubmit} className="card-body">
           <fieldset className="fieldset space-y-3">

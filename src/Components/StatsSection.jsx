@@ -1,8 +1,19 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 
 const StatsSection = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: false,
+    })
+  }, [])
+
   return (
-    <div className="text-center p-10 md:p-20 bg-black/10 text-gray-800 rounded-2xl ">
+    <div
+      data-aos="zoom-in"
+      className="text-center p-10 md:p-20 bg-black/10 text-gray-800 rounded-2xl "
+    >
       <div className="md:max-w-[1600px] mx-auto ">
         <h1 className="mb-5 text-xl md:text-5xl font-bold">Trusted by Millions, Built for You</h1>
 

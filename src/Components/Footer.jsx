@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router'
 import './Footer.css'
 import { FaFacebook, FaXTwitter } from 'react-icons/fa6'
 import { BsLinkedin, BsTwitterX } from 'react-icons/bs'
 import { CgMail } from 'react-icons/cg'
 import appLogo from '/appLogo3.png'
+import Aos from 'aos'
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: false,
+    })
+  }, [])
+
   return (
     <div className=" text-black bg-black/25">
       <div className="flex md:flex-row flex-col md:justify-around text-center max-w-[1400px] mx-auto gap-8 py-10">

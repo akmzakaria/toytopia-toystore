@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData, useParams } from 'react-router'
 import { MdEventAvailable, MdOutlinePriceCheck } from 'react-icons/md'
 import { FaStar } from 'react-icons/fa'
@@ -6,6 +6,7 @@ import { Send } from 'lucide-react'
 import Error404 from '../Pages/Error404'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Aos from 'aos'
 
 const ToyDetails = () => {
   const data = useLoaderData()
@@ -21,19 +22,30 @@ const ToyDetails = () => {
     setTimeout(() => setSuccess(''), 5000)
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: false,
+    })
+  }, [])
+
   return (
-    <div className="">
+    <div>
       <div className={'bg-[#E8FFF5]'}>
         <header className="sticky max-w-7xl mx-auto top-0 z-50 ">
           <Navbar></Navbar>
         </header>
 
         <main className="max-w-7xl mx-auto">
-          <div className="min-h-screen pb-5 bg-[#E8FFF5]">
+          <div className=" pb-5 bg-[#E8FFF5]">
             <div className="max-w-5xl mx-auto">
               <title>ToyTopia - Toy Details</title>
               {/* toy details */}
-              <div className="flex md:flex-row flex-col items-center md:gap-10 gap-5 p-5 md:p-15">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                className="flex md:flex-row flex-col items-center md:gap-10 gap-5 p-5 md:p-15"
+              >
                 <img
                   className="rounded-lg object-cover h-60 w-60 md:h-80 md:w-80 shadow-lg"
                   src={fltData.pictureURL}
@@ -89,7 +101,11 @@ const ToyDetails = () => {
               </div>
 
               {/* form  */}
-              <div className="flex justify-center px-2 mt-10">
+              <div
+                data-aos="zoom-in"
+                data-aos-anchor-placement="center-bottom"
+                className="flex justify-center px-2 mt-10"
+              >
                 <div className="card border w-full max-w-sm shadow-2xl rounded-2xl text-gray-700 pt-5">
                   <form onSubmit={handleSubmit} className="card-body">
                     <fieldset className="fieldset space-y-3">
@@ -138,7 +154,11 @@ const ToyDetails = () => {
               {/* back button */}
               <div className="text-center mt-6">
                 <p className="text-gray-400">Or</p>
-                <Link to={-1} className="btn btn-outline btn-primary rounded-full mt-2">
+                <Link
+                  data-aos="zoom-in"
+                  to={-1}
+                  className="btn btn-outline btn-primary rounded-full mt-2"
+                >
                   Go Back
                 </Link>
               </div>

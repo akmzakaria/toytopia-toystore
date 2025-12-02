@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router'
 import { MdEventAvailable } from 'react-icons/md'
 import { FaStar } from 'react-icons/fa'
+import Aos from 'aos'
 
 const ToyCard = ({ toy }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: false,
+    })
+  }, [])
+
   return (
     <div>
-      <div className="flex flex-col shadow rounded-xl w-[300px] md:w-[300px] gap-2 p-4 bg-white  mt-5">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="flex flex-col shadow rounded-xl w-[300px] md:w-[300px] gap-2 p-4 bg-white  mt-5"
+      >
         <img className="w-full rounded-2xl" src={toy.pictureURL} />
         <h3 className=" text-[#ffffff] text-sm font-medium md:text-xl">{toy.toyName}</h3>
         <p className="text-[#ffffff] text-xs">Price: {toy.price}$</p>

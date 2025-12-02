@@ -1,8 +1,9 @@
-import React, { use } from 'react'
+import React, { use, useEffect } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router'
 import { AuthContext } from '../Provider/AuthProvider'
 import { toast } from 'react-toastify'
 import appLogo from '/appLogo3.png'
+import Aos from 'aos'
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -75,9 +76,16 @@ const Navbar = () => {
       })
   }
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
+  }, [])
+
   return (
     <div>
-      <div className="navbar rounded-full bg-[#E8FFF5] shadow-sm">
+      <div data-aos="zoom-out-down" className="navbar rounded-full bg-[#E8FFF5] shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div
