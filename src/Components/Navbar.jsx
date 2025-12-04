@@ -1,4 +1,4 @@
-import React, { use, useEffect } from 'react'
+import React, { use } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router'
 import { AuthContext } from '../Provider/AuthProvider'
 import { toast } from 'react-toastify'
@@ -11,36 +11,66 @@ const Navbar = () => {
   const links = (
     <nav className="flex flex-col md:flex-row">
       <li>
-        <NavLink className={'text-black active:bg-black/15'} to={'/'}>
+        <NavLink
+          className={
+            'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+          }
+          to={'/'}
+        >
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className={'text-black active:bg-black/15'} to={'/alltoys'}>
+        <NavLink
+          className={
+            'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+          }
+          to={'/alltoys'}
+        >
           All Toys
         </NavLink>
       </li>
       {user && (
         <>
           <li>
-            <NavLink className={'text-black active:bg-black/15'} to={'/profile'}>
+            <NavLink
+              className={
+                'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+              }
+              to={'/profile'}
+            >
               My Profile
             </NavLink>
           </li>
         </>
       )}
       <li>
-        <NavLink className={'text-black active:bg-black/15'} to={'/support'}>
+        <NavLink
+          className={
+            'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+          }
+          to={'/support'}
+        >
           Support
         </NavLink>
       </li>
       <li>
-        <NavLink className={'text-black active:bg-black/15'} to={'/contact'}>
-          Contact
+        <NavLink
+          className={
+            'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+          }
+          to={'/contact'}
+        >
+          Contact Us
         </NavLink>
       </li>
       <li>
-        <NavLink className={'text-black active:bg-black/15'} to={'/aboutUs'}>
+        <NavLink
+          className={
+            'text-black active:bg-black/15 px-3 py-2 rounded-md transition-all duration-300 hover:scale-105 hover:bg-black/10'
+          }
+          to={'/aboutUs'}
+        >
           About Us
         </NavLink>
       </li>
@@ -76,20 +106,16 @@ const Navbar = () => {
       })
   }
 
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      once: true,
-    })
-  }, [])
+  // useEffect(() => {
+  //   Aos.init({
+  //     duration: 1500,
+  //     once: true,
+  //   })
+  // }, [])
 
   return (
     <div>
-      <div
-        data-aos="zoom-out-down"
-        data-aos-anchor-placement="bottom-bottom"
-        className="navbar rounded-full bg-[#E8FFF5] shadow-sm"
-      >
+      <div className="navbar rounded-full bg-[#E8FFF5]">
         <div className="navbar-start">
           <div className="dropdown">
             <div

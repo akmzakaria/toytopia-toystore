@@ -6,6 +6,9 @@ import MailUs from '../Components/Feedback'
 import Feedback from '../Components/Feedback'
 import { AuthContext } from '../Provider/AuthProvider'
 import Loading from './Loading'
+import Reviews from '../Components/reviews'
+
+const reviewPromise = fetch('/reviews.json').then((res) => res.json())
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
@@ -29,6 +32,7 @@ const Home = () => {
       <PopularToys></PopularToys>
       <StatsSection></StatsSection>
       <Feedback></Feedback>
+      <Reviews reviewPromise={reviewPromise}></Reviews>
     </div>
   )
 }

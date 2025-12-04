@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from '../Pages/Home'
 import Navbar from '../Components/Navbar'
 import Profile from '../Pages/Profile'
@@ -6,12 +6,20 @@ import { Outlet } from 'react-router'
 import Footer from '../Components/Footer'
 import { ToastContainer } from 'react-toastify'
 import Loading from '../Pages/Loading'
+import Aos from 'aos'
 
 const HomeLayout = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
+  }, [])
+
   return (
     <div className="bg-[#E8FFF5]">
       <div className={'bg-[#E8FFF5] '}>
-        <header className="sticky max-w-7xl mx-auto top-0 z-50">
+        <header data-aos="zoom-out-down" className="sticky max-w-7xl mx-auto top-0 z-50 ">
           <Navbar></Navbar>
         </header>
 
