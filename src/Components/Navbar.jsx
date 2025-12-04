@@ -61,7 +61,7 @@ const Navbar = () => {
           }
           to={'/contact'}
         >
-          Contact Us
+          Contact
         </NavLink>
       </li>
       <li>
