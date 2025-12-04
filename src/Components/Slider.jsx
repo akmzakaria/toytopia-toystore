@@ -41,7 +41,7 @@ const Slider = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
-        className="lg:w-[900px] xl:w-full rounded-2xl h-75 md:h-[450px]"
+        className="lg:w-[900px] xl:w-full rounded-2xl h-75 md:h-[450px] transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105"
       >
         <SwiperSlide>
           <img src={car2} className="w-full h-full object-cover" />

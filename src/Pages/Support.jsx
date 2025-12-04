@@ -37,7 +37,7 @@ const Support = () => {
       {/* Sections */}
       <div className="space-y-10">
         {/* ORDER SUPPORT */}
-        <section className="bg-base-100 p-6 rounded-xl shadow-md">
+        <section className="bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-3">📦 Order Support</h2>
 
           <div className="space-y-3 text-gray-700">
@@ -53,7 +53,7 @@ const Support = () => {
         </section>
 
         {/* PAYMENT SUPPORT */}
-        <section className="bg-base-100 p-6 rounded-xl shadow-md">
+        <section className="bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-3">💰 Payment & Billing</h2>
 
           <div className="space-y-3 text-gray-700">
@@ -68,7 +68,7 @@ const Support = () => {
         </section>
 
         {/* SHIPPING */}
-        <section className="bg-base-100 p-6 rounded-xl shadow-md">
+        <section className="bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-3">🚚 Shipping & Delivery</h2>
 
           <div className="space-y-3 text-gray-700">
@@ -85,7 +85,7 @@ const Support = () => {
         </section>
 
         {/* RETURNS */}
-        <section className="bg-base-100 p-6 rounded-xl shadow-md">
+        <section className="bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-3">🔄 Returns & Refunds</h2>
 
           <div className="space-y-3 text-gray-700">
@@ -97,7 +97,7 @@ const Support = () => {
         </section>
 
         {/* SAFETY */}
-        <section className="bg-base-100 p-6 rounded-xl shadow-md">
+        <section className="bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-3">👶 Product Safety</h2>
 
           <p className="text-gray-700">

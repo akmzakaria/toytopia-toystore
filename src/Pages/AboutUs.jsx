@@ -72,15 +72,15 @@ const AboutUs = () => {
         <section>
           <h2 className="text-2xl font-semibold text-primary mb-3">Our Team</h2>
           <div className="grid md:grid-cols-3 gap-6 mt-4">
-            <div className="bg-green-50 p-4 rounded-lg text-center shadow">
+            <div className="bg-green-50 p-4 rounded-lg text-center shadow transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
               <h3 className="font-semibold text-lg">AKM Zakaria</h3>
               <p className="text-gray-600 text-sm">Founder & CEO</p>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg text-center shadow">
+            <div className="bg-green-50 p-4 rounded-lg text-center shadow transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
               <h3 className="font-semibold text-lg">Omar</h3>
               <p className="text-gray-600 text-sm">Product Manager</p>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg text-center shadow">
+            <div className="bg-green-50 p-4 rounded-lg text-center shadow transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
               <h3 className="font-semibold text-lg">Support Team</h3>
               <p className="text-gray-600 text-sm">Customer Service</p>
             </div>

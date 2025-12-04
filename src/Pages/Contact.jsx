@@ -35,7 +35,7 @@ const Contact = () => {
 
       <div className="grid md:grid-cols-2 gap-10">
         {/* CONTACT INFO */}
-        <div className="space-y-6 bg-base-100 p-6 rounded-xl shadow-md">
+        <div className="space-y-6 bg-base-100 p-6 rounded-xl shadow-md transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-4">📞 Get in Touch</h2>
 
           <div className="flex items-center gap-4">
@@ -65,7 +65,7 @@ const Contact = () => {
         </div>
 
         {/* CONTACT FORM */}
-        <form className="bg-base-100 p-6 rounded-xl shadow-md space-y-5">
+        <form className="bg-base-100 p-6 rounded-xl shadow-md space-y-5 transition transform ease-in-out duration-300 hover:shadow-xl hover:scale-105">
           <h2 className="text-2xl font-semibold mb-4">✉️ Send Us a Message</h2>
 
           <div>

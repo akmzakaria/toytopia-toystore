@@ -121,7 +121,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-black/5 active:bg-black/15 border-0 rounded-md btn-ghost md:hidden"
+              className="btn hover:bg-black/5 active:bg-black/15 border-0 rounded-md btn-ghost md:hidden transition-transform duration-500 hover:scale-110 "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ const Navbar = () => {
           </div>
           <Link
             to={'/'}
-            className="btn text-gray-700 hover:bg-black/5 hover:border-0 hover:rounded-full active:bg-black/15 bg-[#E8FFF5] border-0 rounded-full text-xl"
+            className="btn text-gray-700 hover:bg-black/5 hover:border-0 hover:rounded-full active:bg-black/15 bg-[#E8FFF5] border-0 rounded-full text-xl transition-transform duration-500 hover:scale-110"
           >
             <img className="w-10" src={appLogo} alt="" />
             ToyZone
@@ -164,7 +164,7 @@ const Navbar = () => {
               <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
                 {user.photoURL ? (
                   <img
-                    className="w-10 h-10 rounded-full bg-base-300 cursor-pointer object-cover"
+                    className="w-10 h-10 rounded-full bg-base-300 cursor-pointer object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
                     src={user.photoURL}
                     alt="User"
                   />
@@ -182,12 +182,15 @@ const Navbar = () => {
             {user ? (
               <Link
                 onClick={handleLogOut}
-                className="btn md:mr-5 btn-secondary rounded-full px-5 md:px-10"
+                className="btn md:mr-5 btn-secondary rounded-full px-5 md:px-10 transition-transform duration-500 hover:scale-110"
               >
                 Log Out
               </Link>
             ) : (
-              <Link to={'/login'} className="btn md:mr-5 btn-primary rounded-full px-5 md:px-10">
+              <Link
+                to={'/login'}
+                className="btn md:mr-5 btn-primary rounded-full px-5 md:px-10 transition-transform duration-500 hover:scale-110 "
+              >
                 Login
               </Link>
             )}

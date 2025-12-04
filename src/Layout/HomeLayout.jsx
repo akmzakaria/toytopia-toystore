@@ -9,17 +9,17 @@ import Loading from '../Pages/Loading'
 import Aos from 'aos'
 
 const HomeLayout = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      once: true,
-    })
-  }, [])
+  // useEffect(() => {
+  //   Aos.init({
+  //     duration: 1500,
+  //     once: true,
+  //   })
+  // }, [])
 
   return (
     <div className="bg-[#E8FFF5]">
       <div className={'bg-[#E8FFF5] '}>
-        <header data-aos="zoom-out-down" className="sticky max-w-7xl mx-auto top-0 z-50 ">
+        <header className="sticky max-w-7xl mx-auto top-0 z-50 ">
           <Navbar></Navbar>
         </header>
 
