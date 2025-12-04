@@ -25,14 +25,14 @@ const AboutUs = () => {
   }
 
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-screen mb-20">
       {/* Header */}
-      <header className=" py-6 text-center text-primary text-3xl md:text-4xl font-bold">
+      <header className=" pt-6 text-center text-primary text-3xl md:text-4xl font-bold">
         ToyZone – About Us
       </header>
 
       {/* Content Container */}
-      <div className="max-w-4xl mx-auto bg-white mt-10 p-8 rounded-xl shadow-md">
+      <div className="max-w-4xl mx-5 md:mx-auto bg-white mt-10 p-8 rounded-xl shadow-md">
         {/* Who We Are */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-primary mb-3">Who We Are</h2>
