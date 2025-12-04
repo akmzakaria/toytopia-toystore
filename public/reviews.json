@@ -77,7 +77,7 @@
     "userName": "Michael Jordan",
     "delivery_email": "delivery7@example.com",
     "ratings": 3.3,
-    "review": "Decent service!.",
+    "review": "Decent service!",
     "parcel_id": "5f47ac10b4f1c03e8c210987",
     "pick_up_email": "pickup7@example.com",
     "user_photoURL": "https://randomuser.me/api/portraits/men/22.jpg",
